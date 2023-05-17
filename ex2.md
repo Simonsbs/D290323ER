@@ -5,4 +5,4 @@
 3. write a time element for tommorows date, including the datetime attribute
 4. use the SUB tags on the following: H2O
 5. use the SUP tag on the following: This line points to a footnote 2
-6. find a white space poem and display it in a PRE element
+6. find a white space poem and display it in a PRE element [Example source](https://medium.com/lit-up/the-white-space-in-poetry-41619b22594a)
