@@ -1,5 +1,21 @@
 h1 {
-  background: yellow;
+  background: darkred;
+  /*color: rgb(0-255, 68, 141);*/
+  /*color: rgba(57, 68, 141, 50%);*/
+  /*
+  HEX
+  0123456789ABCDEF
+  255 = FF
+  0 = 00
+  */
+  /*
+  color: rgb(255, 0, 255);
+  color: #ff00ff;
+  color: #acf;
+  color: #aaccff;
+  color: hsl(120, 55%, 35%);
+  color: rgb(97, 161, 212);
+  */
 }
 
 h2 {
