@@ -1,0 +1,18 @@
+h1 {
+  background: yellow;
+}
+
+h2 {
+  background: pink;
+  font-size: 60px;
+}
+
+/* This block is for all the paragraphs */
+p {
+  /*padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;*/
+
+  padding: 20px 20px 20px 20px;
+}
