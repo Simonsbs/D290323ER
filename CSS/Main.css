@@ -1,3 +1,7 @@
+a {
+  font-size: 10000px;
+}
+
 h1 {
   background: darkred;
   /*color: rgb(0-255, 68, 141);*/
@@ -18,9 +22,16 @@ h1 {
   */
 }
 
-h2 {
-  background: pink;
-  font-size: 60px;
+h2,
+h3,
+h4,
+h5 {
+  background: red;
+  font-size: 10px;
+}
+
+li a {
+  font-size: 30px;
 }
 
 /* This block is for all the paragraphs */
@@ -31,4 +42,27 @@ p {
   padding-left: 20px;*/
 
   padding: 20px 20px 20px 20px;
+}
+
+a {
+  font-size: 20px;
+  background-color: red;
+}
+
+#pDescription {
+  background-color: chartreuse;
+}
+
+.PaddedBlue {
+  background-color: blue;
+  padding: 10px;
+}
+
+.BigFont {
+  font-size: 60px;
+}
+
+#a1,
+#a2 {
+  font-style: italic;
 }
