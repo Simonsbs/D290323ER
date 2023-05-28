@@ -15,20 +15,37 @@
             background-color: yellow;
             border: 2px solid black;
             padding: 10px;
+            margin: 0px;
+            display: inline-block;
+            font-size: 16px;
         }
 
-        /*.first{
-            margin-bottom: 0;
-        }
         .first{
-            margin-bottom: 0;
-        }*/
+            margin-bottom: 0px;
+        }
+        .second{
+            margin-top: 0px;
+        }
+
+        .move-left{
+            margin-left: -4px;
+        }
+
+        .zero-font{
+            font-size: 0px;
+        }
     </style>
 </head>
 <body>
-    <p class="first">Im a block 1</p>
-    <p class="second">Im a block 2</p>
+    <p class="first">Im a block - first</p>
+    <p class="second">Im a block - second</p>
+    <hr />
+    <section class="zero-font">
+        <span>Im inline 1</span>
+        <span>Im inline 2</span>
+    </section>
+    <hr />
     <span>Im inline 1</span>
-    <span>Im inline 2</span>
+    <span class="move-left">Im inline 2</span>
 </body>
 </html>
