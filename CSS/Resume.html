@@ -4,27 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fictitious Resume</title>
+  <style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    section {
+        margin: 0px;
+        padding:20px;
+    }
+
+    /*h1, h2, p, ul{
+        margin: 0px;
+    }*/
+
+    .wrapper{
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+    header {
+        background-color: blueviolet;
+        padding:20px;
+    }
+
+    #profile{
+        background-color: greenyellow;
+    }
+    #portfolio{
+        background-color: coral;
+    }
+    #experience{
+        background-color: cornflowerblue;
+    }
+    #education{
+        background-color: darkkhaki;
+    }
+    #contact{
+        background-color: lightsalmon;
+    }
+
+    footer{
+        background-color: aquamarine;
+        padding:20px;
+    }
+
+    figure {
+        width: 30%;
+        display:inline-block;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>John Doe</h1>
-    <nav>
-      <ul>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#experience">Work Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact Info</a></li>
-      </ul>
-    </nav>
+    <div class="wrapper">
+        <h1>John Doe</h1>
+        <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact Info</a></li>
+        </ul>
+        </nav>
+    </div>
   </header>
 
   <section id="profile">
-    <h2>Profile</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere neque vitae lorem blandit, eget tincidunt tortor rutrum.</p>
+    <div class="wrapper">
+        <h2>Profile</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere neque vitae lorem blandit, eget tincidunt tortor rutrum.</p>
+    </div>
   </section>
 
   <section id="portfolio">
+    <div class="wrapper">
     <h2>Portfolio</h2>
     <figure>
       <img src="https://picsum.photos/200/150" alt="Project 1">
@@ -33,7 +90,7 @@
         <p>Description of project 1.</p>
         <p><a href="https://www.example.com/project1">View project</a></p>
       </figcaption>
-    </figure>
+    </figure>   
 
     <figure>
       <img src="https://picsum.photos/200/150" alt="Project 2">
@@ -43,9 +100,11 @@
         <p><a href="https://www.example.com/project2">View project</a></p>
       </figcaption>
     </figure>
+    </div>
   </section>
 
   <section id="experience">
+    <div class="wrapper">
     <h2>Work Experience</h2>
     <ul>
       <li>
@@ -61,9 +120,11 @@
         <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </li>
     </ul>
+    </div>
   </section>
 
   <section id="education">
+    <div class="wrapper">
     <h2>Education</h2>
     <ul>
       <li>
@@ -72,17 +133,22 @@
         <p>Date: 2011 - 2015</p>
       </li>
     </ul>
+    </div>
   </section>
 
   <section id="contact">
+    <div class="wrapper">
     <h2>Contact Info</h2>
     <p>Email: john.doe@example.com</p>
     <p>Phone: 123-456-7890</p>
     <p>Address: 123 Main St, City, State, ZIP</p>
+    </div>
   </section>
 
   <footer>
+    <div class="wrapper">
     <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
