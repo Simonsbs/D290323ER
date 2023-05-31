@@ -69,3 +69,10 @@ let j = i++;
 i--;
 
 //log(i);
+
+// Precedence
+
+let price = (3 + 2) * 2;
+//log(price);
+price = 3 + 2 * 2;
+//log(price);
