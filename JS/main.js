@@ -76,3 +76,9 @@ let price = (3 + 2) * 2;
 //log(price);
 price = 3 + 2 * 2;
 //log(price);
+
+// Precision
+
+let value = 1.1 + 1.3;
+//value = 1 + 2;
+//log(value);
