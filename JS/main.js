@@ -107,3 +107,14 @@ let lName = "Stirling";
 //log("hey " + fName.toLowerCase());
 
 //log(1 + "2");
+
+
+// Converting
+
+let amount = 1234;
+amount = amount.toString();
+log(typeof amount);
+
+let amount2 = "     123.45";
+amount2 = Number.parseFloat(amount2);
+log(amount2);
