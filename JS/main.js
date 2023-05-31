@@ -1,2 +1,3 @@
-//alert(1234);
 log("Hello World");
+log("Simon");
+log("Bobo");
