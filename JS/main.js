@@ -5,7 +5,7 @@ log("Bobo");
 */
 
 let myName = "Simon Stirling";
-log(myName);
+//log(myName);
 
 let aNewThing;
 
@@ -13,7 +13,7 @@ aNewThing = false;
 aNewThing = "12345";
 aNewThing = 12345;
 
-log(aNewThing);
+//log(aNewThing);
 
 let a;
 let _a;
@@ -25,10 +25,47 @@ let a1;
 const aConstantVariable = 5;
 const pi = 3.14;
 
-log(aConstantVariable * pi);
+//log(aConstantVariable * pi);
 
 // Var
 
 b = 1234;
-log(b);
+//log(b);
 var b = "Im a value";
+
+// Numbers
+let num = 12;
+let num2 = 10;
+
+num = num + 1; // 13
+num = num - 1; // 12
+num = num * 2; // 24
+num = num / 2; // 12
+num = num % 5; // 2
+
+num = 12;
+
+num += 1; // 13
+num -= 1; // 12
+num *= 2; // 24
+num /= 2; // 12
+num %= 5; // 2
+
+//num = num2 + 2;
+
+//log(num);
+
+// Inc / Dec
+let i = 10;
+
+//i++; // 11
+
+let j = i++;
+//let k = i++;
+
+//log(i);
+//log(j);
+
+i--;
+
+//log(i);
