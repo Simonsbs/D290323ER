@@ -82,3 +82,28 @@ price = 3 + 2 * 2;
 let value = 1.1 + 1.3;
 //value = 1 + 2;
 //log(value);
+
+// String
+
+let msg = "Hello 'World'!";
+//log(msg);
+
+let msg2 = 'Hello "World"!';
+//log(msg2);
+
+let age = 30;
+let msg3 = `Simon wishes he was "${age}", but he isn't`;
+//log(msg3);
+
+let fName = "Simon";
+let lName = "Stirling";
+
+//fName += " ";
+
+//log(fName + " " + lName);
+//log(`${fName} ${lName}`);
+
+//log("hey " + fName.toUpperCase());
+//log("hey " + fName.toLowerCase());
+
+//log(1 + "2");
