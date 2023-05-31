@@ -113,8 +113,17 @@ let lName = "Stirling";
 
 let amount = 1234;
 amount = amount.toString();
-log(typeof amount);
+//log(typeof amount);
 
 let amount2 = "     123.45";
 amount2 = Number.parseFloat(amount2);
-log(amount2);
+//log(amount2);
+
+// Boolean
+
+let happy = true;
+let sad = false;
+log(!happy);
+log(happy);
+log(!sad);
+log(sad);
