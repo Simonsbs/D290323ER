@@ -26,3 +26,9 @@ const aConstantVariable = 5;
 const pi = 3.14;
 
 log(aConstantVariable * pi);
+
+// Var
+
+b = 1234;
+log(b);
+var b = "Im a value";
