@@ -149,3 +149,25 @@ if (val2 === 10) {
 }*/
 
 // Loops
+let i = 0;
+
+/*for(i = 1; i < 10; i *= 2){
+    log("Loop " + i);
+}*/
+/*
+for(i = 5; i > 0; i--){
+    log("Loop " + i);
+}
+
+*/
+
+while (i < 10) {
+    i+=2;
+
+    log('While ' + i);
+
+    
+}
+
+
+log('after loop');
