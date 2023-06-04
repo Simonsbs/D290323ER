@@ -161,13 +161,26 @@ for(i = 5; i > 0; i--){
 
 */
 
-while (i < 10) {
-    i+=2;
-
+while (false) {
     log('While ' + i);
-
-    
+    //i++;
 }
 
+//log('after loop');
 
-log('after loop');
+/*for(let i = 20; i > 0; i = i - 5){
+    log("Im line " + i);
+}*/
+
+i = 0;
+
+do {
+    log('do ' + i);
+    //i++;
+} while(false);
+
+
+/*do {
+    Get Value from user (1-10)
+    valueGood = if value is ok
+} while (valueNotGood);*/
