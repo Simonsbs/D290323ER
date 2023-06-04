@@ -1,4 +1,4 @@
-/*for(let i = 1; i <= 100; i++){
+for(let i = 1; i <= 100; i++){
     if ((i % 15) === 0) {
         log(i + ' fizzbuzz');
     } else if((i % 5) === 0){
@@ -8,7 +8,7 @@
     } else {
         log(i);
     }
-}*/
+}
 
 /*let i = 1;
 while( i <= 100){
@@ -24,7 +24,7 @@ while( i <= 100){
     i++;
 }*/
 
-for (let i = 1; i <= 100; i++) {
+/*for (let i = 1; i <= 100; i++) {
     let output = "";
 
     if (i % 3 === 0){
@@ -40,4 +40,4 @@ for (let i = 1; i <= 100; i++) {
     } else {
         log(i);  
     }
-}
+}*/
