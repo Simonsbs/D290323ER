@@ -13,7 +13,8 @@
 ## loops
 1. create a for loop that runs from 2-8 and prints out a line "Im line #" (replace # with the loop index)
 2. create a for loop that runs from 20-5 in jumps of 5 and prints out a line "Im line #" (replace # with the loop index)
-3. create a while loop that loops 100 times and prints out:
-    a. fizz for indexes that divide by 3 (no left over)
-    b. buzz for indexes that divide by 5 (no left over)
-    c. fizzbuzz for indexes that divide by 5 and 3 (no left over)
+3. create a loop that loops 100 times and prints out:
+    a. 'fizz' for indexes that divide by 3 (no left over)
+    b. 'buzz' for indexes that divide by 5 (no left over)
+    c. 'fizzbuzz' for indexes that divide by 5 and 3 (no left over)
+    d. for all other indexes just print the number
