@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: green;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        span {
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 0px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .first{
+            margin-bottom: 0px;
+        }
+        .second{
+            margin-top: 0px;
+        }
+
+        .move-left{
+            margin-left: -4px;
+        }
+
+        .zero-font{
+            font-size: 0px;
+        }
+    </style>
+</head>
+<body>
+    <p class="first">Im a block - first</p>
+    <p class="second">Im a block - second</p>
+    <hr />
+    <section class="zero-font">
+        <span>Im inline 1</span>
+        <span>Im inline 2</span>
+    </section>
+    <hr />
+    <span>Im inline 1</span>
+    <span class="move-left">Im inline 2</span>
+</body>
+</html>
