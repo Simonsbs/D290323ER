@@ -13,11 +13,11 @@ function bubbleSort(arr){
 }
 
 function swap(arr, fromI, toI){
-    arr.splice(fromI, 2, arr[toI], arr[fromI]);
+    //arr.splice(fromI, 2, arr[toI], arr[fromI]);
 
-    /*let cup = arr[fromI];
+    let cup = arr[fromI];
     arr[fromI] = arr[toI];
-    arr[toI] = cup;*/
+    arr[toI] = cup;
 }
 
 
