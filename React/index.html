@@ -17,6 +17,26 @@
     <!-- <h1>Hello World!</h1> -->
 
     <script type="text/babel">
+        function SiteHeader(){
+            return (
+                <header>
+                    <h1>This is my site</h1>
+                </header>
+            );
+        }
+
+        function MainApp(){
+            return(
+                <section>
+                    <p>This is some content</p>
+                    <p>This is some content</p>
+                    <p>This is some content</p>
+                    <p>This is some content</p>
+                    <p>This is some content</p>
+                </section>
+            );
+        }
+
         let root = document.getElementById("root");
         
         //let h2Element = React.createElement("h2", null, "Hello World from REACT!");
@@ -34,13 +54,18 @@
 
         // JSX - Java Script XML
 
-        ReactDOM.render(
-        <ul>
+        /*<ul>
             <li>{names[0]}</li>
             <li>{names[1]}</li>
             <li>{names[2].length}</li>
             <li>{names[3].toUpperCase()}</li>
-        </ul>
+        </ul>*/
+
+        ReactDOM.render(
+            <section>
+                <SiteHeader />
+                <MainApp />
+            </section>
         , root);
     </script>
 </body>
