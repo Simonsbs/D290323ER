@@ -17,23 +17,27 @@
     <!-- <h1>Hello World!</h1> -->
 
     <script type="text/babel">
-        function SiteHeader(){
+        function SiteHeader(props){
             return (
                 <header>
-                    <h1>This is my site</h1>
+                    <h1>This is {props.name}</h1>
                 </header>
             );
         }
 
-        function MainApp(){
+        function MainApp(props){
             return(
                 <section>
-                    <p>This is some content</p>
-                    <p>This is some content</p>
-                    <p>This is some content</p>
-                    <p>This is some content</p>
-                    <p>This is some content</p>
+                    <p>I am {props.feeling}</p>
                 </section>
+            );
+        }
+
+        function SiteFooter(props){
+            return (
+                <footer>
+                    <h1>This is the footer, trademark {props.year}</h1>
+                </footer>
             );
         }
 
@@ -63,8 +67,10 @@
 
         ReactDOM.render(
             <section>
-                <SiteHeader />
-                <MainApp />
+                <SiteHeader name="Simon's Site" />
+                <SiteHeader name="Jim's Site" />
+                <MainApp feeling="happy" />
+                <SiteFooter year={new Date().getFullYear()} />
             </section>
         , root);
     </script>
