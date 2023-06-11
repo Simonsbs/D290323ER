@@ -28,7 +28,11 @@
         function MainApp(props){
             return(
                 <section>
-                    <p>I am {props.feeling}</p>
+                    {
+                        props.data.map((x) => (
+                            <p>{x} is {props.feeling}</p>
+                        ))
+                    }                    
                 </section>
             );
         }
@@ -54,7 +58,7 @@
             React.createElement("li", null, "Wanda"),
         );*/
 
-        let names = ["Simon 3", "Bob 3", "Jane 3", "Wanda 3"];
+        let names = ["Simon", "Bob", "Jane", "Wanda"];
 
         // JSX - Java Script XML
 
@@ -69,7 +73,8 @@
             <section>
                 <SiteHeader name="Simon's Site" />
                 <SiteHeader name="Jim's Site" />
-                <MainApp feeling="happy" />
+                <MainApp feeling="happy" data={["Jim", "Joe", "Sammy"]} />
+                <MainApp feeling="happy" data={names} />
                 <SiteFooter year={new Date().getFullYear()} />
             </section>
         , root);
