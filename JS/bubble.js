@@ -1,6 +1,8 @@
 function bubbleSort(arr){
-    for(let j = 0; j < (arr.length - 1); j++){
-        for (let i = 0; i < (arr.length - 1) - j;i++) {
+    var len = arr.length - 1;
+
+    for(let j = 0; j < len; j++){
+        for (let i = 0; i < len - j;i++) {
             if(arr[i] > arr[i + 1]) {
                 swap(arr, i, i + 1);
             }
