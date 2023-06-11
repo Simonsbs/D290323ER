@@ -8,16 +8,40 @@
 
     <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
 
-    <h1>Hello World!</h1>
+    <!-- <h1>Hello World!</h1> -->
 
-    <script type="text/javascript">
+    <script type="text/babel">
         let root = document.getElementById("root");
-        let h2Element = React.createElement("h2", null, "Hello World from REACT!");
-        ReactDOM.render(h2Element, root);
+        
+        //let h2Element = React.createElement("h2", null, "Hello World from REACT!");
+
+        /*let ul = React.createElement(
+            "ul", 
+            {style: {color:"green"}}, 
+            React.createElement("li", null, "Simon"),
+            React.createElement("li", null, "Bob"),
+            React.createElement("li", null, "Jane"),
+            React.createElement("li", null, "Wanda"),
+        );*/
+
+        let names = ["Simon 3", "Bob 3", "Jane 3", "Wanda 3"];
+
+        // JSX - Java Script XML
+
+        ReactDOM.render(
+        <ul>
+            <li>{names[0]}</li>
+            <li>{names[1]}</li>
+            <li>{names[2]}</li>
+            <li>{names[3]}</li>
+        </ul>
+        , root);
     </script>
 </body>
 </html>
