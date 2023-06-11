@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <h1>Hello World!</h1>
+
+    <script type="text/javascript">
+        let root = document.getElementById("root");
+        let h2Element = React.createElement("h2", null, "Hello World from REACT!");
+        ReactDOM.render(h2Element, root);
+    </script>
+</body>
+</html>
