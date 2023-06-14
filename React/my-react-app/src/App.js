@@ -1,19 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App({ name, color }) {
-  const [firstFruit, secondThing, anotherThingy] = ["Apple", "Pear", "Orange"];
 
-  console.log(firstFruit);
-  console.log(secondThing);
-  console.log(anotherThingy);
+function App() {
+  const [emotion, setEmotion] = useState("Happy");
+  console.log(setEmotion);
 
   return (
     <div className="App">
-      <h1>{name}'s Hello World the color is: {color}</h1>
-      <p>{firstFruit}</p>
-      <p>{secondThing}</p>
-      <p>{anotherThingy}</p>      
+      <h1>Simon is: {emotion}</h1>
+      <button onClick={() => setEmotion("Angry")}>Angry</button>
+      <button onClick={() => setEmotion("Happy")}>Happy</button>
     </div>
   );
 }
