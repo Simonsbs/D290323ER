@@ -13,7 +13,7 @@ function App({ name, color }) {
       <h1>{name}'s Hello World the color is: {color}</h1>
       <p>{firstFruit}</p>
       <p>{secondThing}</p>
-      <p>{anotherThingy}</p>
+      <p>{anotherThingy}</p>      
     </div>
   );
 }
