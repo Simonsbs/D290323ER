@@ -20,7 +20,16 @@
 //                      0       1       2       3        4        5
         let names = ["Simon", "Bob", "Sammy", "Jane", "Timmy", "Wanda"];
 
-        /*const namesObjects = names.map(
+        let namesObjects = names;
+        for(let j = 0; j < names.length; j++){
+            let item = names[j];
+            namesObjects[j] = {
+                id: j,
+                value: item
+            };
+        }
+
+        /*namesObjects = names.map(
             (item, i) => (
                 {
                     id: i,
@@ -29,14 +38,14 @@
             )
         );*/
 
-        const namesObjects = [
+        /*namesObjects = [
                 {id: 0, value: names[0]}, // Simon
                 {id: 1, value: names[1]}, // Bob
                 {id: 2, value: names[2]}, // Sammy
                 {id: 3, value: names[4]}, // Wanda
                 {id: 4, value: names[3]} // Timmy,
                 
-        ];
+        ];*/
 
         function SiteHeader(props){
             return (
@@ -54,6 +63,10 @@
             return(
                 <section>
                     {
+                        /*props.data.map((x, i) => (
+                            <p key={i}>{x.value} is <b>{props.feeling}</b></p>
+                        ))*/
+
                         props.data.map((x) => (
                             <p key={x.id}>{x.value} is <b>{props.feeling}</b></p>
                         ))
