@@ -17,6 +17,27 @@
     <!-- <h1>Hello World!</h1> -->
 
     <script type="text/babel">
+//                      0       1       2       3        4        5
+        let names = ["Simon", "Bob", "Sammy", "Jane", "Timmy", "Wanda"];
+
+        /*const namesObjects = names.map(
+            (item, i) => (
+                {
+                    id: i,
+                    value: item
+                }   
+            )
+        );*/
+
+        const namesObjects = [
+                {id: 0, value: names[0]}, // Simon
+                {id: 1, value: names[1]}, // Bob
+                {id: 2, value: names[2]}, // Sammy
+                {id: 3, value: names[4]}, // Wanda
+                {id: 4, value: names[3]} // Timmy,
+                
+        ];
+
         function SiteHeader(props){
             return (
                 <header>
@@ -26,11 +47,15 @@
         }
 
         function MainApp(props){
+            props.data.map((x) => {
+                            console.log(x);
+                        });
+
             return(
                 <section>
                     {
                         props.data.map((x) => (
-                            <p>{x} is {props.feeling}</p>
+                            <p key={x.id}>{x.value} is <b>{props.feeling}</b></p>
                         ))
                     }                    
                 </section>
@@ -58,7 +83,7 @@
             React.createElement("li", null, "Wanda"),
         );*/
 
-        let names = ["Simon", "Bob", "Jane", "Wanda"];
+        
 
         // JSX - Java Script XML
 
@@ -73,8 +98,8 @@
             <section>
                 <SiteHeader name="Simon's Site" />
                 <SiteHeader name="Jim's Site" />
-                <MainApp feeling="happy" data={["Jim", "Joe", "Sammy"]} />
-                <MainApp feeling="happy" data={names} />
+                
+                <MainApp feeling="happy" data={namesObjects} />
                 <SiteFooter year={new Date().getFullYear()} />
             </section>
         , root);
