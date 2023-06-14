@@ -14,20 +14,32 @@
 <body>
     <div id="root"></div>
 
+    <div></div>
+
     <!-- <h1>Hello World!</h1> -->
 
     <script type="text/babel">
 //                      0       1       2       3        4        5
-        let names = ["Simon", "Bob", "Sammy", "Jane", "Timmy", "Wanda"];
+        //let names = ["Simon", "Bob", "Sammy", "Jane", "Timmy", "Wanda"];
 
-        let namesObjects = names;
-        for(let j = 0; j < names.length; j++){
+        let namesObjects = [
+                {id: 1, value: "Bob"}, // Bob
+                {id: 2, value: "Sammy"}, // Sammy
+                {id: 0, value: "Simon"}, // Simon
+                {id: 3, value: "Wanda"}, // Wanda
+                {id: 4, value: "Timmy"} // Timmy
+        ];
+        /*for(let j = 0; j < names.length; j++){
             let item = names[j];
             namesObjects[j] = {
                 id: j,
                 value: item
             };
-        }
+        }*/
+
+        /*namesObjects.map((x) => {
+                            console.log(x);
+                        });*/
 
         /*namesObjects = names.map(
             (item, i) => (
@@ -56,10 +68,6 @@
         }
 
         function MainApp(props){
-            props.data.map((x) => {
-                            console.log(x);
-                        });
-
             return(
                 <section>
                     {
@@ -70,7 +78,9 @@
                         props.data.map((x) => (
                             <p key={x.id}>{x.value} is <b>{props.feeling}</b></p>
                         ))
-                    }                    
+                    }
+                    <img src="https://picsum.photos/300/300" alt="A random image" />
+                    <img src="MyImg.jpg" alt="A random image" />
                 </section>
             );
         }
