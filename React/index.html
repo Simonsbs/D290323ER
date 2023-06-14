@@ -20,7 +20,7 @@
 
     <script type="text/babel">
 //                      0       1       2       3        4        5
-        //let names = ["Simon", "Bob", "Sammy", "Jane", "Timmy", "Wanda"];
+        let names = ["Simon", "Bob", "Sammy", "Jane", "Timmy", "Wanda"];
 
         let namesObjects = [
                 {id: 1, value: "Bob"}, // Bob
@@ -29,12 +29,19 @@
                 {id: 3, value: "Wanda"}, // Wanda
                 {id: 4, value: "Timmy"} // Timmy
         ];
+        
+        
         /*for(let j = 0; j < names.length; j++){
-            let item = names[j];
-            namesObjects[j] = {
-                id: j,
-                value: item
+            // if j == 0 then item == "Simon"
+            let item = names[j]; // Simon
+            
+            let newItem = {
+                id: j, // 0
+                value: item // Simon
             };
+
+            namesObjects[j] = newItem;
+
         }*/
 
         /*namesObjects.map((x) => {
@@ -49,6 +56,20 @@
                 }   
             )
         );*/
+
+        namesObjects = names.map(ConvertNamesToObject);
+
+        /*for(let i = 0; i < names.length; i++){
+            ConvertNamesToObject(names[i], i);
+        }*/
+
+        function ConvertNamesToObject(item, i){
+            let result = {
+                    id: i,
+                    value: item
+                };
+            return result;
+        }
 
         /*namesObjects = [
                 {id: 0, value: names[0]}, // Simon
