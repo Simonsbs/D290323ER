@@ -90,7 +90,7 @@
 
         function MainApp(props){
             return(
-                <section>
+                <React.Fragment>
                     {
                         /*props.data.map((x, i) => (
                             <p key={i}>{x.value} is <b>{props.feeling}</b></p>
@@ -102,7 +102,7 @@
                     }
                     <img src="https://picsum.photos/300/300" alt="A random image" />
                     <img src="MyImg.jpg" alt="A random image" />
-                </section>
+                </React.Fragment>
             );
         }
 
@@ -139,13 +139,13 @@
         </ul>*/
 
         ReactDOM.render(
-            <section>
+            <React.Fragment>
                 <SiteHeader name="Simon's Site" />
                 <SiteHeader name="Jim's Site" />
                 
                 <MainApp feeling="happy" data={namesObjects} />
                 <SiteFooter year={new Date().getFullYear()} />
-            </section>
+            </React.Fragment>
         , root);
     </script>
 </body>
