@@ -2,7 +2,7 @@ import './App.css';
 import { doStuff } from './MyModule';
 import MyTitle from './Components/MyTitle';
 import MyDataTable from './Components/MyDataTable';
-
+/*
 function PrintMe(val){
   val = 30;
   console.log("PrintMe x:" + val);
@@ -12,11 +12,11 @@ function PrintMeObject(val){
   val.name = "Jane";
   console.log("PrintMe val.name:" + val.name);
 }
-
+*/
 
 function App() {
   doStuff();
-  
+  /*
   let x = 10;
   let y = x;
   x = 20;
@@ -32,7 +32,7 @@ function App() {
   o2.name = "Jimmy";
 
   PrintMeObject(o1);
-
+*/
   return (
     <>
       <MyTitle>
