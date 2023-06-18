@@ -1,5 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import { doStuff } from './MyModule';
+import MyTitle from './Components/MyTitle';
+import MyDataTable from './Components/MyDataTable';
 
 function PrintMe(val){
   val = 30;
@@ -13,6 +15,8 @@ function PrintMeObject(val){
 
 
 function App() {
+  doStuff();
+  
   let x = 10;
   let y = x;
   x = 20;
@@ -21,24 +25,28 @@ function App() {
 
   console.log("Main x: " + x);
 
-  let o1 = {name:"Simon"};
-  let o2 = o1;
-
+  const o1 = {name:"Simon"};
+  const o2 = o1;
   
-
   //o1.name = "Bob";
   o2.name = "Jimmy";
 
   PrintMeObject(o1);
 
   return (
-    <div className="App">
-      x: {x}<br/>
-      y: {y}<br/>
-      <hr/>
-      o1 name: {o1.name}<br/>
-      o2 name: {o2.name}<br/>
-    </div>
+    <>
+      <MyTitle>
+        Bob's Site
+      </MyTitle>
+      <MyDataTable></MyDataTable>
+      {/* <div className="App">
+        x: {x}<br/>
+        y: {y}<br/>
+        <hr/>
+        o1 name: {o1.name}<br/>
+        o2 name: {o2.name}<br/>
+      </div> */}
+    </>
   );
 }
 
