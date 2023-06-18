@@ -11,13 +11,15 @@ function App() {
 
   return (
     <div className="App">
-      <img src="asdasd"></img>
+      
       <h1>Simon is: {emotion}</h1>
       <h1>My color is: {color}</h1>
       <button onClick={() => setEmotion("Angry")}>Angry</button>
       <button onClick={() => setEmotion("Happy")}>Happy</button>
-
+<hr />
       {/* TODO: Add 2 buttons that change color from red to blue and back */}
+      <button onClick={()=>setColor("Red")}>Red</button>
+      <button onClick={()=>setColor("Blue")}>Blue</button>
     </div>
   );
 }
