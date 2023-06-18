@@ -1,10 +1,10 @@
-function MyDataRow({person}){
+function MyDataRow({person: {id, fName, lName, age}}){
     return(
-        <tr key={person.id}>
-            <td>{person.id}</td>
-            <td>{person.fName}</td>
-            <td>{person.lName}</td>
-            <td>{person.age}</td>
+        <tr key={id}>
+            <td>{id}</td>
+            <td>{fName}</td>
+            <td>{lName}</td>
+            <td>{age}</td>
         </tr>
     );
 }

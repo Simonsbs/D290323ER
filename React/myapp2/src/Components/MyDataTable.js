@@ -44,7 +44,17 @@ function MyDataTable() {
                         ))
                         */}
                         {
-                            listOfPeople.map((person) => (<MyDataRow person={person}/>))
+                            // listOfPeople.map((person) => (
+                            //     <MyDataRow id={person.id} fName={person.fName} lName={person.lName} age={person.age} />
+                            // ))
+
+                            // listOfPeople.map((person) => (
+                            //     <MyDataRow {...person} />
+                            // ))
+
+                            listOfPeople.map((person) => (
+                                <MyDataRow person={person} />
+                            ))
                         }
                 </tbody>
             </table>
