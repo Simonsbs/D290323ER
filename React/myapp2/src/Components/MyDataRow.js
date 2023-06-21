@@ -1,6 +1,6 @@
 function MyDataRow({person: {id, fName, lName, age}}){
     return(
-        <tr key={id}>
+        <tr>
             <td>{id}</td>
             <td>{fName}</td>
             <td>{lName}</td>
