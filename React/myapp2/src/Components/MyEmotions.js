@@ -24,12 +24,11 @@ function MyEmotions() {
     };
 
     useEffect(() => {
-        if(color === "Green"){
+        if (color === "Green") {
             console.log('IM GREEN!!!');
-        }else{
+        } else {
             console.log('Hey from effect');
-        }
-        
+        }        
     }, [color, emotion]);
 
     // useEffect(() => {
