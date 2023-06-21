@@ -3,6 +3,8 @@ import { doStuff } from './MyModule';
 import MyTitle from './Components/MyTitle';
 import MyDataTable from './Components/MyDataTable';
 import MyEmotions from './Components/MyEmotions';
+import MyCheckBox from './Components/MyCheckBox';
+import MyCounter from './Components/MyCounter';
 /*
 function PrintMe(val){
   val = 30;
@@ -36,7 +38,9 @@ function App() {
 */
   return (
     <>
-      <MyEmotions></MyEmotions>
+      <MyCounter></MyCounter>
+      {/* <MyCheckBox></MyCheckBox> */}
+      {/* <MyEmotions></MyEmotions> */}
       {/* <hr/>
       <MyTitle>
         Bob's Site
