@@ -2,6 +2,7 @@ import './App.css';
 import { doStuff } from './MyModule';
 import MyTitle from './Components/MyTitle';
 import MyDataTable from './Components/MyDataTable';
+import MyEmotions from './Components/MyEmotions';
 /*
 function PrintMe(val){
   val = 30;
@@ -35,6 +36,8 @@ function App() {
 */
   return (
     <>
+      <MyEmotions></MyEmotions>
+      <hr/>
       <MyTitle>
         Bob's Site
       </MyTitle>

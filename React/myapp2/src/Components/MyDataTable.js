@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MyDataRow from "./MyDataRow";
 
 const listOfPeople = [
@@ -28,7 +28,10 @@ function MyDataTable() {
                                         ]);
     const [counter, setCounter] = useState(0);
     
+    
+
     const addPersonDirect = () => {
+        // DONT USE THIS METHOD!!!!
         listOfPeople.push({id: 123, fName: "Emma", lName: "Smith", age: 25});
         console.log('Added person to list');
     };
@@ -86,7 +89,10 @@ function MyDataTable() {
                         }
                 </tbody>
             </table>
+            
+            
             <button onClick={addPersonDirect}>
+                {/* DONT USE THIS METHOD!!!! */}
                 Add person direct
             </button>
 
