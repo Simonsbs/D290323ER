@@ -16,7 +16,7 @@ function PrintMeObject(val){
 */
 
 function App() {
-  doStuff();
+  //doStuff();
   /*
   let x = 10;
   let y = x;
@@ -37,11 +37,11 @@ function App() {
   return (
     <>
       <MyEmotions></MyEmotions>
-      <hr/>
+      {/* <hr/>
       <MyTitle>
         Bob's Site
       </MyTitle>
-      <MyDataTable></MyDataTable>
+      <MyDataTable></MyDataTable> */}
       {/* <div className="App">
         x: {x}<br/>
         y: {y}<br/>
