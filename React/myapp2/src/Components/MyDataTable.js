@@ -53,7 +53,7 @@ function MyDataTable() {
                             // ))
 
                             listOfPeople.map((person) => (
-                                <MyDataRow person={person} />
+                                <MyDataRow key={person.id} person={person} />
                             ))
                         }
                 </tbody>
