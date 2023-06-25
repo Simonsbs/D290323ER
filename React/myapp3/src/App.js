@@ -1,7 +1,8 @@
 import './App.css';
-import CustomHook from './components/CustomHook';
+import GitHub from './components/GitHub';
+//import CustomHook from './components/CustomHook';
 //import Controlled from './components/Controlled';
-import SetFocus from './components/SetFocus';
+//import SetFocus from './components/SetFocus';
 //import Uncontrolled from './components/Uncontrolled';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       {/* <Uncontrolled></Uncontrolled> */}
       {/* <Controlled></Controlled> */}
       {/* <SetFocus></SetFocus> */}
-      <CustomHook></CustomHook>
+      {/* <CustomHook></CustomHook> */}
+      <GitHub></GitHub>
     </>
   );
 }
