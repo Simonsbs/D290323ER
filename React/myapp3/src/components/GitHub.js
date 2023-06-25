@@ -9,12 +9,15 @@ function GitHub(){
             .then((data) => setData(data))
     }, []);
 
+    if(data == null){
+        return (<>No data yet</>);
+    }
     return (
         <>
             <h2>Github API data</h2>
             {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
             Login: {data.login}<br/>
-            <a href={data.url}>Link</a><br/>            
+            <a href={data.url}>Link</a><br/>
         </>
     );
 }
