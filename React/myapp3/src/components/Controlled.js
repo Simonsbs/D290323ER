@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-
-
 function Controlled(){
     const [name, setName] = useState("");
     const [color, setColor] = useState("#000000");

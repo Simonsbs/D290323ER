@@ -1,14 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Controlled from './components/Controlled';
-//import Uncontrolled from './components/uncontrolled';
+//import Controlled from './components/Controlled';
+import SetFocus from './components/SetFocus';
+//import Uncontrolled from './components/Uncontrolled';
 
 function App() {
   return (
     <>
       <h1>My Site</h1>
       {/* <Uncontrolled></Uncontrolled> */}
-      <Controlled></Controlled>
+      {/* <Controlled></Controlled> */}
+      <SetFocus></SetFocus>
     </>
   );
 }
