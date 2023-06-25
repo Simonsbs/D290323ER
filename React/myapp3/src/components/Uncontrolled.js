@@ -12,7 +12,7 @@ function Uncontrolled(){
 
         alert(`the name of the color is: ${name}, and the selected color is: ${color}`);
 
-        tbName.current.value = "New color...";
+        tbName.current.value = "";
         csColor.current.value = "#000000";
     };
 

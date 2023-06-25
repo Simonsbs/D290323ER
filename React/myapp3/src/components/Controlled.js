@@ -10,6 +10,9 @@ function Controlled(){
         e.preventDefault();
 
         alert(`the name of the color is: ${name}, and the selected color is: ${color}`);
+
+        setName("");
+        setColor("#000000");
     }
 
     return (
