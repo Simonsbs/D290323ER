@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function AboutUs(){
     return (
@@ -12,6 +12,9 @@ function AboutUs(){
             <div>
                 This is a page that tells you about us
             </div>
+            <Link to="/aboutus/clients">Clients</Link> | 
+            <Link to="/aboutus/projects">Projects</Link> | 
+            <Outlet/>
         </>
     );
 }
