@@ -1,8 +1,12 @@
 import { useReducer } from 'react';
 import './App.css';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import AddItem from './Pages/AddItem';
+import EditItem from './Pages/EditItem';
 
 const initalState = {
-  items: []
+  items: ["ToDo 1","ToDo 2"]
 }
 
 function reducer(state, action){
@@ -25,7 +29,20 @@ function App() {
   const [state, dispatcher] = useReducer(reducer, initalState);
 
   return (
-    <h1>Welcome to my ToDo list app</h1>
+    <Router>
+      <h1>Welcome to my ToDo list app</h1>
+      <hr/>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/add">Add Item</Link></li>
+        </ul>
+      <hr/>
+      <Routes>
+        <Route path="/" Component={() => <Home state={state} dispatcher={dispatcher} />} />
+        <Route path="/add" Component={() => <AddItem state={state} dispatcher={dispatcher} />} />
+        <Route path="/edit" Component={() => <EditItem state={state} dispatcher={dispatcher} />} />
+      </Routes>
+    </Router>
   );
 }
 
