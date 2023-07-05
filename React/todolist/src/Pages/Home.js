@@ -7,7 +7,8 @@ function Home({ state, dispatcher }) {
       <ol>
         {state.items.map((item, index) => (
           <li key={index}>
-            {item} | <Link to="/edit">Edit</Link> | <button>Delete</button>
+            {item} | <Link to={`/edit/${index}`}>Edit</Link> |
+            <button>Delete</button>
           </li>
         ))}
       </ol>

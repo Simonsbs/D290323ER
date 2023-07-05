@@ -6,21 +6,35 @@ import AddItem from "./Pages/AddItem";
 import EditItem from "./Pages/EditItem";
 
 const initalState = {
-  items: [],
-  currentColor: "blue",
+  items: ["111", "222", "333"],
 };
 
 function reducer(state, action) {
-  //console.log(action);
-  //console.log(state);
+  console.log(action);
+  console.log(state);
+
+  /*let newState = {
+    items: [...state.items],
+  };*/
+  let newState = { ...state };
 
   switch (action.type) {
     case "ADD_ITEM":
       //console.log("requested to add data: " + action.payload);
-      let newState = {
+      newState = {
         items: [...state.items, action.payload],
-        currentColor: "blue",
       };
+      return newState;
+    case "EDIT_ITEM":
+      // NO !!!!!
+      // state.items[action.indexToEdit] = action.payload;
+
+      // Option 1 for action style
+      // newState.items[action.indexToEdit] = action.payload;
+
+      // Option 2 for action style
+      newState.items[action.payload.indexToEdit] = action.payload.newValue;
+
       return newState;
     default:
       console.log("No action of type " + action.type + " was found");
@@ -51,10 +65,10 @@ function App() {
         />
         <Route
           path="/add"
-          Component={() => <AddItem state={state} dispatcher={dispatcher} />}
+          Component={() => <AddItem dispatcher={dispatcher} />}
         />
         <Route
-          path="/edit"
+          path="/edit/:id"
           Component={() => <EditItem state={state} dispatcher={dispatcher} />}
         />
       </Routes>
