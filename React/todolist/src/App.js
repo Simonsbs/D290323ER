@@ -36,6 +36,11 @@ function reducer(state, action) {
       newState.items[action.payload.indexToEdit] = action.payload.newValue;
 
       return newState;
+    case "DELETE_ITEM":
+      console.log("index to delete: " + action.payload.indexToDelete);
+      newState.items.splice(action.payload.indexToDelete, 1);
+
+      return newState;
     default:
       console.log("No action of type " + action.type + " was found");
       return state;
