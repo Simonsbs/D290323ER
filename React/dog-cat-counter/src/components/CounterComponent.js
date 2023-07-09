@@ -46,6 +46,7 @@ function CounterComponent() {
 
   return (
     <>
+      <h2>useReducer - V1</h2>
       <hr />
       <h3>Cats: {state.cats}</h3>
       <button onClick={() => dispatch({ type: "ADD_CAT" })}>Add cat</button>
