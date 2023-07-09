@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const initalState = { cats: 0, dogs: 0 };
 
