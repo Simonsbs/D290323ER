@@ -1,9 +1,10 @@
-import "./Temp3.css";
+import styles from "./Temp3.module.css";
 
 function Temp3({ children }) {
   return (
     <>
-      <div className="tempClass3">{children}</div>
+      <div className={styles.tempClass}>{children}</div>
+      <div className="fromGlobal">From global css</div>
     </>
   );
 }

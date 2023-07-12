@@ -1,5 +1,5 @@
 import "./App.css";
-import Temp1 from "./components/Temp1";
+//import Temp1 from "./components/Temp1";
 import Temp2 from "./components/Temp2";
 import Temp3 from "./components/Temp3";
 

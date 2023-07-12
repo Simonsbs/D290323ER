@@ -1,10 +1,10 @@
-import "./Temp2.css";
+import styles from "./Temp2.module.css";
 
 function Temp2({ children }) {
   return (
     <>
-      <div className="tempClass">{children}</div>
-      <div className="tempClass2">{children}</div>
+      <div className={styles.tempClass}>{children}</div>
+      <div className={styles.tempClass2}>{children}</div>
     </>
   );
 }
