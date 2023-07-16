@@ -40,6 +40,37 @@ function Bootstrap3() {
             </div>
           </div>
         </div>
+        <h2>More stuff i like:</h2>
+        <div className="row">
+          <div className="col-sm-6 col-md-3">
+            <img
+              src="https://picsum.photos/id/200/500/500"
+              alt="..."
+              className="img-fluid rounded-2"
+            />
+          </div>
+          <div className="col-sm-6 col-md-3">
+            <img
+              src="https://picsum.photos/id/240/500/500"
+              alt="..."
+              className="img-fluid rounded-2"
+            />
+          </div>
+          <div className="col-sm-6 col-md-3">
+            <img
+              src="https://picsum.photos/id/137/500/500"
+              alt="..."
+              className="img-fluid rounded-2"
+            />
+          </div>
+          <div className="col-sm-6 col-md-3">
+            <img
+              src="https://picsum.photos/id/125/500/500"
+              alt="..."
+              className="img-fluid rounded-2"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
