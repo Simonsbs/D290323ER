@@ -1,20 +1,16 @@
 div[class^="col"],
 div[class*=" col"] {
-  padding: 2px;
   background-color: aquamarine;
   border: 1px solid black;
 }
 div[class^="container"],
 div[class*=" container"] {
-  padding: 2px;
   background-color: burlywood;
   border: 1px solid black;
 }
 
 div[class^="row"],
 div[class*=" row"] {
-  padding: 2px;
-
   background-color: darksalmon;
   border: 1px solid black;
 }

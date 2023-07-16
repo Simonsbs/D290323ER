@@ -40,8 +40,28 @@ function Bootstrap2() {
           <div className="col-9">Row 4 Col 2</div>
         </div>
         <div className="row">
-          <div className="col-5 col-md-8">Row 4 Col 1</div>
-          <div className="col-7 col-md-8">Row 4 Col 2</div>
+          <div className="col-5 col-md-8">Row 5 Col 1</div>
+          <div className="col-7 col-md-8">Row 5 Col 2</div>
+        </div>
+        <div className="row">
+          <div className="col-md-4">Row 6 Col 1</div>
+          <div className="col-md-4">Row 6 Col 2</div>
+        </div>
+        <div className="row">
+          <div className="col-2">Row 7 Col 1</div>
+          <div className="col-4 offset-2">Row 7 Col 2</div>
+          <div className="col-4">Row 7 Col 3</div>
+        </div>
+        <div className="row">
+          <div className="col order-4">Row 8 Col 1 - order 4</div>
+          <div className="col">Row 8 Col 2</div>
+          <div className="col order-1">Row 8 Col 3 - order 1</div>
+          <div className="col">Row 8 Col 4</div>
+          <div className="col order-3">Row 8 Col 5 - order 3</div>
+        </div>
+        <div className="row g-5">
+          <div className="col-md">Row 9 Col 1</div>
+          <div className="col-md">Row 9 Col 2</div>
         </div>
       </div>
     </>
