@@ -1,4 +1,4 @@
-div[class^="col"],
+/* div[class^="col"],
 div[class*=" col"] {
   background-color: aquamarine;
   border: 1px solid black;
@@ -13,4 +13,4 @@ div[class^="row"],
 div[class*=" row"] {
   background-color: darksalmon;
   border: 1px solid black;
-}
+} */
