@@ -1,4 +1,13 @@
+import GalleryCard from "./GalleryCard";
+
 function Bootstrap3() {
+  const data = [
+    { id: 200, title: "Title 1", description: "Description 1" },
+    { id: 250, title: "Title 2", description: "Description 2" },
+    { id: 280, title: "Title 3", description: "Description 3" },
+    { id: 290, title: "Title 4", description: "Description 4" },
+  ];
+
   return (
     <>
       <div className="container">
@@ -170,35 +179,13 @@ function Bootstrap3() {
         </div>
 
         <h2>More stuff i like:</h2>
+
         <div className="row">
-          <div className="col-sm-6 col-md-3">
-            <img
-              src="https://picsum.photos/id/200/500/500"
-              alt="..."
-              className="img-fluid rounded-2"
-            />
-          </div>
-          <div className="col-sm-6 col-md-3">
-            <img
-              src="https://picsum.photos/id/240/500/500"
-              alt="..."
-              className="img-fluid rounded-2"
-            />
-          </div>
-          <div className="col-sm-6 col-md-3">
-            <img
-              src="https://picsum.photos/id/137/500/500"
-              alt="..."
-              className="img-fluid rounded-2"
-            />
-          </div>
-          <div className="col-sm-6 col-md-3">
-            <img
-              src="https://picsum.photos/id/125/500/500"
-              alt="..."
-              className="img-fluid rounded-2"
-            />
-          </div>
+          {data.map((item) => (
+            <div className="col-sm-6 col-md-3  mb-3">
+              <GalleryCard item={item} />
+            </div>
+          ))}
         </div>
       </div>
     </>
