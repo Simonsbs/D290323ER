@@ -1,3 +1,5 @@
+import "./Navigation.css";
+
 function Navigation() {
   return (
     <header className="mb-3">
@@ -7,7 +9,7 @@ function Navigation() {
             <img
               src="https://picsum.photos/id/237/30/30"
               alt="Dog logo"
-              className="me-2"
+              className="me-2 rounded"
             />
             My Doggie Site
           </a>
@@ -30,6 +32,24 @@ function Navigation() {
               </li>
             </ul>
           </div>
+        </div>
+      </nav>
+      <nav>
+        <div className="container mt-2">
+          <ol className="breadcrumb bc-icon">
+            <li className="breadcrumb-item">
+              <a href="#">Home</a>
+            </li>
+            <li className="breadcrumb-item">
+              <a href="#">Breeds</a>
+            </li>
+            <li className="breadcrumb-item">
+              <a href="#">Gender</a>
+            </li>
+            <li className="breadcrumb-item active">
+              <a href="#">A Dog</a>
+            </li>
+          </ol>
         </div>
       </nav>
     </header>
