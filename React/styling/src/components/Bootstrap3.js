@@ -2,7 +2,7 @@ function Bootstrap3() {
   return (
     <>
       <div className="container">
-        <h1>My Doggie Site</h1>
+        <h1 className="p-2">My Doggie Site</h1>
         <div className="row">
           <div className="col-sm-4 col-md-8">
             <img
@@ -13,7 +13,7 @@ function Bootstrap3() {
           </div>
           <div className="col-sm-8 col-md-4">
             <h3>About my dog</h3>
-            <p>
+            <p className="border border-warning p-2">
               Keelhaul loaded to the gunwalls hearties plunder Letter of Marque
               Brethren of the Coast long clothes chase knave gally. Schooner
               killick port gaff ahoy sloop mutiny nipperkin reef Barbary Coast.
@@ -40,7 +40,14 @@ function Bootstrap3() {
             </div>
           </div>
         </div>
-        <hr />
+        <div className="row">
+          <div className="col">
+            <div className="p-4 mb-3 mt-4 bg-light rounded border border-warning">
+              <h4>Dog Tip of the day</h4>
+              <p className="mb-0 fst-italic">Dogs are better than cats</p>
+            </div>
+          </div>
+        </div>
         <div className="row">
           <div className="col">
             <table className="table table-dark">
@@ -110,7 +117,7 @@ function Bootstrap3() {
             </div>
           </div>
         </div>
-        <hr />
+
         <h2>More stuff i like:</h2>
         <div className="row">
           <div className="col-sm-6 col-md-3">
