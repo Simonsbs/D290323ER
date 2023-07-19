@@ -2,7 +2,7 @@ function Bootstrap3() {
   return (
     <>
       <div className="container">
-        <h1 className="p-2">My Doggie Site</h1>
+        {/* <h1 className="p-2">My Doggie Site</h1> */}
         <div className="row">
           <div className="col-sm-4 col-md-8">
             <img
