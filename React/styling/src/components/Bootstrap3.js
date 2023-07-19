@@ -69,33 +69,45 @@ function Bootstrap3() {
                 </tr>
               </tbody>
             </table>
-
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Color</th>
-                  <th>Weight</th>
-                  <th>Breed</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Black</td>
-                  <td>80Kg</td>
-                  <td>Husky</td>
-                </tr>
-                <tr>
-                  <td>Brown</td>
-                  <td>60Kg</td>
-                  <td>Labrador</td>
-                </tr>
-                <tr>
-                  <td>Green</td>
-                  <td>10Kg</td>
-                  <td>Alien</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="table-responsive">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Color</th>
+                    <th>Weight</th>
+                    <th>Breed</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                    <th>STUM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Black</td>
+                    <td>80Kg</td>
+                    <td>Husky</td>
+                  </tr>
+                  <tr>
+                    <td>Brown</td>
+                    <td>60Kg</td>
+                    <td>Labrador</td>
+                  </tr>
+                  <tr>
+                    <td>Green</td>
+                    <td>10Kg</td>
+                    <td>Alien</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <hr />
