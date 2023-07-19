@@ -40,6 +40,65 @@ function Bootstrap3() {
             </div>
           </div>
         </div>
+        <hr />
+        <div className="row">
+          <div className="col">
+            <table className="table table-dark">
+              <thead className="table-light">
+                <tr>
+                  <th>Color</th>
+                  <th>Weight</th>
+                  <th>Breed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Black</td>
+                  <td>80Kg</td>
+                  <td>Husky</td>
+                </tr>
+                <tr className="table-success">
+                  <td>Brown</td>
+                  <td className="table-warning">60Kg</td>
+                  <td>Labrador</td>
+                </tr>
+                <tr>
+                  <td>Green</td>
+                  <td>10Kg</td>
+                  <td>Alien</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Color</th>
+                  <th>Weight</th>
+                  <th>Breed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Black</td>
+                  <td>80Kg</td>
+                  <td>Husky</td>
+                </tr>
+                <tr>
+                  <td>Brown</td>
+                  <td>60Kg</td>
+                  <td>Labrador</td>
+                </tr>
+                <tr>
+                  <td>Green</td>
+                  <td>10Kg</td>
+                  <td>Alien</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr />
         <h2>More stuff i like:</h2>
         <div className="row">
           <div className="col-sm-6 col-md-3">
