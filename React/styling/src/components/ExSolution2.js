@@ -29,12 +29,16 @@ function ExSolution2() {
     console.log(`toBe 1: ${tmp.toBe(5)}`);
   } catch (error) {
     console.log("toBe 1: " + error.message);
+  } finally {
+    console.log("Finally 1");
   }
 
   try {
     console.log(`notToBe 2: ${tmp.notToBe(5)}`);
   } catch (error) {
     console.log("notToBe 2: " + error.message);
+  } finally {
+    console.log("Finally 2");
   }
 
   // -----------------------------------------------------
@@ -43,12 +47,16 @@ function ExSolution2() {
     console.log(`toBe 3: ${expect(5).toBe(4)}`);
   } catch (error) {
     console.log("toBe 3: " + error.message);
+  } finally {
+    console.log("Finally 3");
   }
 
   try {
     console.log(`notToBe 4: ${expect(6).notToBe(4)}`);
   } catch (error) {
     console.log("notToBe 4: " + error.message);
+  } finally {
+    console.log("Finally 4");
   }
 
   //console.log(tmp);
