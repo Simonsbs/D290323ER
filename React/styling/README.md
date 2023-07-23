@@ -36,3 +36,11 @@ funcA(5).toBe(8) // throws "Not Equal"
 let x = funcA(5);
 x.toBe(8);
 _/
+
+---
+
+write a function that extends the Date object built into javascript
+the function 'nextDay' will return the date value found in the object plus one day (24 hours)
+
+const date = new Date('2023-07-23');
+date.nextDay(); // result should be: 2023-07-24
