@@ -131,7 +131,7 @@ function BootstrapForm() {
             Select a size:
           </label>
           <select id="selectSize" className="form-select">
-            <option selected>Select a size</option>
+            <option>Select a size</option>
             <option>Big</option>
             <option>Small</option>
             <option>Medium</option>
@@ -142,6 +142,33 @@ function BootstrapForm() {
             Select Range:
           </label>
           <input type="range" id="priceRange" className="form-range" />
+        </div>
+
+        <div className="mb-5 form-check">
+          <input type="checkbox" id="onOff1" className="form-check-input" />
+          <label htmlFor="onOff1" className="form-check-label">
+            On / Off
+          </label>
+        </div>
+
+        <div className="mb-5 form-check form-switch">
+          <input type="checkbox" id="onOff2" className="form-check-input" />
+          <label htmlFor="onOff2" className="form-check-label">
+            On / Off
+          </label>
+        </div>
+
+        <div className="mb-5">
+          <input type="checkbox" id="onOff3" className="btn-check" />
+          <label htmlFor="onOff3" className="btn btn-warning">
+            On / Off
+          </label>
+        </div>
+        <div className="mb-5">
+          <input type="checkbox" id="onOff3" className="btn-check" checked />
+          <label htmlFor="onOff3" className="btn btn-warning">
+            On / Off
+          </label>
         </div>
       </form>
     </div>
