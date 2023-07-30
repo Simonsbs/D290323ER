@@ -1,5 +1,6 @@
 import "./App.css";
 import BootstrapForm from "./components/BootstrapForm";
+import BootstrapPurchaseForm from "./components/BootstrapPurchaseForm";
 import ExSolution3 from "./components/ExSolution3";
 //import Bootstrap1 from "./components/Bootstrap1";
 //import Bootstrap2 from "./components/Bootstrap2";
@@ -18,7 +19,8 @@ function App() {
       {/* <ExSolution /> */}
       {/* <ExSolution2 /> */}
       {/* <BootstrapForm /> */}
-      <ExSolution3 />
+      {/* <ExSolution3 /> */}
+      <BootstrapPurchaseForm />
     </>
   );
 }
