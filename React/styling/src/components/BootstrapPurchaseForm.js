@@ -78,9 +78,63 @@ function BootstrapPurchaseForm() {
         </div>
         <div className="row">
           <div className="col">
-            <h2>Payment details</h2>
+            <div className="form-check">
+              <input
+                type="radio"
+                name="PaymentType"
+                className="form-check-input"
+              />
+              <label className="form-check-label">Credit</label>
+            </div>
+            <div className="form-check">
+              <input
+                type="radio"
+                name="PaymentType"
+                className="form-check-input"
+              />
+              <label className="form-check-label">Cash</label>
+            </div>
+            <div className="form-check">
+              <input
+                type="radio"
+                name="PaymentType"
+                className="form-check-input"
+              />
+              <label className="form-check-label">Paypal</label>
+            </div>
           </div>
         </div>
+        <div className="row mt-3">
+          <div className="col-8">
+            <label className="form-label">Credit card number:</label>
+            <input type="text" className="form-control" />
+          </div>
+          <div className="col-4">
+            <label className="form-label">CVV:</label>
+            <input type="text" className="form-control" />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <label className="form-label">Name on card:</label>
+            <input type="text" className="form-control" />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <label className="form-label">Exp Year:</label>
+            <select className="form-select">
+              <option>2023</option>
+            </select>
+          </div>
+          <div className="col">
+            <label className="form-label">Exp Month:</label>
+            <select className="form-select">
+              <option>12</option>
+            </select>
+          </div>
+        </div>
+        <button className="btn btn-primary mt-3">Send Order</button>
       </form>
     </div>
   );
