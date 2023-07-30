@@ -11,3 +11,4 @@
 6. use bootstrap to design and format the site - (recomended CDN)
 7. validate inputs, so that email is correct format, first name and last name are between 4-20 chars. and password is between 8-20 chars.
 8. add seed data (inital data) make sure site has at least 1 user so you can login :)
+9. you can do this using useReducer and/or useState. either way is ok.
