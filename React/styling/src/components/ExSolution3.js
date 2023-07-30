@@ -12,6 +12,9 @@ function ExSolution3() {
   const date2 = new Date("2023-06-10");
   console.log(`The new date is: ${date2.nextDay()}`);
 
+  const date3 = new Date();
+  console.log(`The new date is: ${date3.nextDay()}`);
+
   return <>Solution 3</>;
 }
 
