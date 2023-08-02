@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const users = [
     {
@@ -33,8 +35,16 @@ function LoginPage() {
 
     if (user) {
       console.log("Found a user, good login");
+
+      localStorage.setItem("isLoggedIn", true);
+
+      navigate("/users");
     } else {
       console.log("no user found, bad login");
+
+      localStorage.setItem("isLoggedIn", false);
+
+      alert("The username and or password are wrong");
     }
   };
 
