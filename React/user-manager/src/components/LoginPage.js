@@ -42,7 +42,7 @@ function LoginPage() {
     } else {
       console.log("no user found, bad login");
 
-      localStorage.setItem("isLoggedIn", false);
+      localStorage.removeItem("isLoggedIn");
 
       alert("The username and or password are wrong");
     }
