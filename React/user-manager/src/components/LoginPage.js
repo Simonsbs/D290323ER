@@ -6,31 +6,9 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const users = [
-    {
-      id: 123,
-      firstName: "Simon",
-      lastName: "Stirling",
-      email: "a@b.com",
-      password: "1234",
-    },
-    {
-      id: 124,
-      firstName: "Bob",
-      lastName: "Smith",
-      email: "c@d.com",
-      password: "4567",
-    },
-    {
-      id: 125,
-      firstName: "Jane",
-      lastName: "Doe",
-      email: "e@f.com",
-      password: "9876",
-    },
-  ];
-
   const handleLogin = () => {
+    let users = JSON.parse(localStorage.getItem("UserData"));
+
     let user = users.find((u) => u.email === email && u.password === password);
 
     if (user) {
