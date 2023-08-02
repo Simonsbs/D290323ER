@@ -12,3 +12,15 @@
 7. validate inputs, so that email is correct format, first name and last name are between 4-20 chars. and password is between 8-20 chars.
 8. add seed data (inital data) make sure site has at least 1 user so you can login :)
 9. you can do this using useReducer and/or useState. either way is ok.
+
+H.W. 2
+
+1. Build a javascript function that returns a fibonacci sequance generator
+
+const gen = myFiboGenerator();
+gen.next().value; // 0
+gen.next().value; // 1
+gen.next().value; // 1
+gen.next().value; // 2
+gen.next().value; // 3
+gen.next().value; // 5
