@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import Protected from "./Protected";
 import UserListPage from "./UserListPage";
+import UserFormPage from "./UserFormPage";
 
 function MyRouter() {
   return (
@@ -22,6 +23,7 @@ function MyRouter() {
           element={
             <Protected>
               <h1>Add User</h1>
+              <UserFormPage />
             </Protected>
           }
         />
