@@ -10,6 +10,18 @@ function UserListPage() {
     setUsers(userData);
   }, []);
 
+  const handleDelete = (i) => {
+    if (!window.confirm("Are you sure?")) {
+      return;
+    }
+
+    const updatedData = [...users];
+    updatedData.splice(i, 1);
+    setUsers(updatedData);
+
+    localStorage.setItem("UserData", JSON.stringify(updatedData));
+  };
+
   return (
     <div className="container">
       <button
@@ -19,7 +31,7 @@ function UserListPage() {
         Add User
       </button>
       <ul className="list-group">
-        {users.map((u) => (
+        {users.map((u, i) => (
           <li key={u.id} className="list-group-item">
             {u.firstName} {u.lastName} - {u.email}
             <button
@@ -27,6 +39,9 @@ function UserListPage() {
               onClick={() => navigate(`/edit-user/${u.id}`)}
             >
               Edit
+            </button>
+            <button className="btn btn-warning" onClick={() => handleDelete(i)}>
+              Delete
             </button>
           </li>
         ))}
