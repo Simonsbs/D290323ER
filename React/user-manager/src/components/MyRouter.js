@@ -28,10 +28,11 @@ function MyRouter() {
           }
         />
         <Route
-          path="/edit-user"
+          path="/edit-user/:id"
           element={
             <Protected>
               <h1>Edit User</h1>
+              <UserFormPage />
             </Protected>
           }
         />

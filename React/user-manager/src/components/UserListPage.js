@@ -22,6 +22,12 @@ function UserListPage() {
         {users.map((u) => (
           <li key={u.id} className="list-group-item">
             {u.firstName} {u.lastName} - {u.email}
+            <button
+              className="btn btn-info"
+              onClick={() => navigate(`/edit-user/${u.id}`)}
+            >
+              Edit
+            </button>
           </li>
         ))}
       </ul>

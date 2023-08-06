@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 function UserFormPage() {
   const navigate = useNavigate();
+  const { id } = useParams();
   const [user, setUser] = useState({
     id: 0,
     firstName: "",
@@ -11,9 +12,33 @@ function UserFormPage() {
     password: "",
   });
 
+  useEffect(() => {
+    if (id) {
+      console.log("In Edit Mode");
+      let currentUserData = JSON.parse(localStorage.getItem("UserData"));
+      let userToEdit = currentUserData.find((u) => u.id === id);
+      if (userToEdit) {
+        setUser(userToEdit);
+      } else {
+        console.error("No such user");
+      }
+    } else {
+      console.log("In Add Mode");
+    }
+  }, []);
+
   const handleSave = () => {
     let currentUserData = JSON.parse(localStorage.getItem("UserData"));
-    currentUserData.push(user);
+
+    if (id) {
+      console.log("In Edit Mode");
+      let i = currentUserData.findIndex((u) => u.id === id);
+      currentUserData[i] = user;
+    } else {
+      console.log("In Add Mode");
+      currentUserData.push(user);
+    }
+
     localStorage.setItem("UserData", JSON.stringify(currentUserData));
 
     navigate("/users");
@@ -72,7 +97,7 @@ function UserFormPage() {
         />
       </div>
       <button className="btn btn-primary me-2" onClick={handleSave}>
-        Save
+        {id ? "Save" : "Add"}
       </button>
       <button className="btn btn-danger" onClick={() => navigate("/users")}>
         Cancel

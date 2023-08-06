@@ -61,7 +61,7 @@ function App() {
     if (!localStorage.getItem("UserData")) {
       const users = [
         {
-          id: 123,
+          id: "123",
           firstName: "Simon",
           lastName: "Stirling",
           email: "a@b.com",
