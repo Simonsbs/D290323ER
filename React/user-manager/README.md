@@ -24,3 +24,17 @@ gen.next().value; // 1
 gen.next().value; // 2
 gen.next().value; // 3
 gen.next().value; // 5
+
+H.W. 3
+
+1. Add nav bar (Component):
+   a. Logo
+   b. Site name
+   c. If logged in:
+   i. "hi first name"
+   ii. logout button
+   iii. link to '/users'
+   d. If logged out:
+   i. link to login
+2. Add footer (Component)
+   Design as you wish
