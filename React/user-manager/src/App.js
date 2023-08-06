@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import MyRouter from "./components/MyRouter";
-
+/*
 function fiboGenerator() {
   let a = 0;
   let b = 1;
@@ -28,7 +28,7 @@ function* yieldDemo() {
   yield 222;
   yield 333;
 }
-
+*/
 function App() {
   // let a = 2;
   // let b = 4;
@@ -46,16 +46,16 @@ function App() {
   console.log(gen());
   console.log(gen());*/
 
-  let gen = fiboGenerator2();
-  for (let i = 0; i < 100; i++) {
-    console.log(gen.next().value);
-  }
+  // let gen = fiboGenerator2();
+  // for (let i = 0; i < 100; i++) {
+  //   console.log(gen.next().value);
+  // }
 
-  let y = yieldDemo();
-  console.log(y.next().value);
-  console.log(y.next().value);
-  console.log(y.next().value);
-  console.log(y.next().value);
+  // let y = yieldDemo();
+  // console.log(y.next().value);
+  // console.log(y.next().value);
+  // console.log(y.next().value);
+  // console.log(y.next().value);
 
   useEffect(() => {
     if (!localStorage.getItem("UserData")) {

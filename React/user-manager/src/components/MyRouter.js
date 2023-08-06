@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import Protected from "./Protected";
+import UserListPage from "./UserListPage";
 
 function MyRouter() {
   return (
@@ -12,6 +13,7 @@ function MyRouter() {
           element={
             <Protected>
               <h1>User List</h1>
+              <UserListPage />
             </Protected>
           }
         />
