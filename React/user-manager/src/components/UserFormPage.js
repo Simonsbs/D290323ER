@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function UserFormPage() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     id: 0,
     firstName: "",
@@ -8,6 +10,14 @@ function UserFormPage() {
     email: "",
     password: "",
   });
+
+  const handleSave = () => {
+    let currentUserData = JSON.parse(localStorage.getItem("UserData"));
+    currentUserData.push(user);
+    localStorage.setItem("UserData", JSON.stringify(currentUserData));
+
+    navigate("/users");
+  };
 
   return (
     <div className="container">
@@ -61,8 +71,12 @@ function UserFormPage() {
           placeholder="enter users password"
         />
       </div>
-      <button className="btn btn-primary me-2">Save</button>
-      <button className="btn btn-danger">Cancel</button>
+      <button className="btn btn-primary me-2" onClick={handleSave}>
+        Save
+      </button>
+      <button className="btn btn-danger" onClick={() => navigate("/users")}>
+        Cancel
+      </button>
     </div>
   );
 }
