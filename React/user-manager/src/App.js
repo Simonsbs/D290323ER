@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import MyRouter from "./components/MyRouter";
+import FooterBar from "./components/FooterBar";
 /*
 function fiboGenerator() {
   let a = 0;
@@ -73,7 +74,12 @@ function App() {
     }
   }, []);
 
-  return <MyRouter />;
+  return (
+    <>
+      <MyRouter />
+      <FooterBar />
+    </>
+  );
 }
 
 export default App;
