@@ -3,7 +3,9 @@ Exercise:
 1. Build a component "MyProfileCard"
 2. the component will take 5 props:
    a. Name - Full name of the person
-   b. Email - Email of the person (mailto:)
+   b. Email - Email of the person (mailto:) <a href="mailto:simon@simon.com">
+   _. Phone - The persons phone number (tel:) <a href="tel:+97212345678">
+   _. Whatsapp - <a href="https://wa.me/+97212345678">
    c. Facebook - link to the persons facebook page
    d. GitHub - link to the persons github profile
    e. LinkedIn - link to the persons linkedin profile
