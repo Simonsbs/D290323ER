@@ -15,12 +15,14 @@ function LoginPage() {
       console.log("Found a user, good login");
 
       localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("userName", `${user.firstName} ${user.lastName}`);
 
       navigate("/users");
     } else {
       console.log("no user found, bad login");
 
       localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("userName");
 
       alert("The username and or password are wrong");
     }

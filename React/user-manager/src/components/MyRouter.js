@@ -3,10 +3,12 @@ import LoginPage from "./LoginPage";
 import Protected from "./Protected";
 import UserListPage from "./UserListPage";
 import UserFormPage from "./UserFormPage";
+import NavBar from "./NavBar";
 
 function MyRouter() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route
