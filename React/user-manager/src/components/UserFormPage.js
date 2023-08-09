@@ -25,7 +25,7 @@ function UserFormPage() {
     } else {
       console.log("In Add Mode");
     }
-  }, []);
+  }, [id]);
 
   const handleSave = () => {
     let currentUserData = JSON.parse(localStorage.getItem("UserData"));
