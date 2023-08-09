@@ -35,8 +35,11 @@ function NavBar() {
         <div className="navbar-nav">
           {isLoggedIn ? (
             <>
-              <span className="navbar-text">Hello, {userName}</span>
-              <button onClick={handleLogout} className="btn btn-info ms-3">
+              <Link to="/users" className="btn btn-primary">
+                Users List
+              </Link>
+              <span className="navbar-text mx-3">Hello, {userName}</span>
+              <button onClick={handleLogout} className="btn btn-info">
                 Logout
               </button>
             </>
