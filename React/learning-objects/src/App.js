@@ -12,7 +12,7 @@ function App() {
     },
   };
 
-  person.sayHello();
+  //person.sayHello();
   //person.color = "Pink";
 
   person = {
@@ -24,7 +24,7 @@ function App() {
     },
   };
 
-  person.sayHello();
+  //person.sayHello();
 
   //person.color = "Yellow";
 
@@ -37,24 +37,28 @@ function App() {
   // Constructor Functions
 
   function Dog(name, age, color) {
-    this.name = name;
-    this.age = age;
-    this.color = color;
+    this.fullName = age > 12 ? name + " the old dog" : name + " the dog";
+    this.ageInTwoYears = age + 2;
+    this.color = "blue";
+    this.legCount = 4;
 
     this.bark = () => {
       console.log(`Woof, my name is ${name}`);
     };
+    this.rollOver = () => {
+      console.log(`Rolled over`);
+    };
   }
 
-  console.log(person);
-  console.log(Dog);
+  //console.log(person);
+  //console.log(Dog);
 
   let simonsDog = new Dog("Fido", 12, "Black");
   simonsDog = new Dog("Rex", 12, "Black");
 
   console.log(simonsDog);
 
-  simonsDog.bark();
+  //simonsDog.bark();
 
   return (
     <>
@@ -65,8 +69,8 @@ function App() {
       </ul>
       <hr />
       <ul>
-        <li>Name: {simonsDog.name}</li>
-        <li>Age: {simonsDog.age}</li>
+        <li>Name: {simonsDog.fullName}</li>
+        <li>Age: {simonsDog.ageInTwoYears}</li>
         <li>Color: {simonsDog.color}</li>
       </ul>
     </>
