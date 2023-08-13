@@ -104,13 +104,38 @@ function App() {
     Create 3 object instances with unique values and call the print function on each one
 
   */
-  console.log(Person);
+  // console.log(Person);
 
-  const c1 = new Person("Simon", "Stirling", 20);
-  const c2 = new Person("Bob", "Smith", 30);
+  // const c1 = new Person("Simon", "Stirling", 20);
+  // const c2 = new Person("Bob", "Smith", 30);
 
-  c1.sayHello();
-  c2.sayHello();
+  // c1.sayHello();
+  // c2.sayHello();
+
+  class Book {
+    constructor(title, author, published) {
+      this.title = title;
+      this.author = author;
+      this.yearPublished = published;
+    }
+
+    print() {
+      console.log(`*********************************`);
+      console.log(`Book description:`);
+      console.log(`Title: ${this.title}`);
+      console.log(`Author: ${this.author}`);
+      console.log(`Year of publication: ${this.yearPublished}`);
+      console.log(`*********************************`);
+    }
+  }
+
+  const b1 = new Book("Title 1", "Simon Stirling", 1990);
+  const b2 = new Book("Title 2", "Bob Smith", 1980);
+  const b3 = new Book("Title 3", "Jane Doe", 1600);
+
+  b1.print();
+  b2.print();
+  b3.print();
 
   return (
     <>
