@@ -133,9 +133,55 @@ function App() {
   const b2 = new Book("Title 2", "Bob Smith", 1980);
   const b3 = new Book("Title 3", "Jane Doe", 1600);
 
-  b1.print();
-  b2.print();
-  b3.print();
+  // b1.print();
+  // b2.print();
+  // b3.print();
+
+  function createPerson(name, age) {
+    return {
+      name: name,
+      age: age,
+
+      printInfo: function () {
+        console.log(`my name is ${name} and im ${age} years old`);
+      },
+    };
+  }
+
+  const d1 = createPerson("Simon", 20);
+  const d2 = createPerson("Bob", 30);
+
+  d1.printInfo();
+  d2.printInfo();
+
+  function animalFactory(type, name) {
+    let result = {
+      myName: name,
+    };
+
+    if (type === "dog") {
+      result.speak = function () {
+        console.log("Woof");
+      };
+    } else if (type === "cat") {
+      result.speak = function () {
+        console.log("Meow");
+      };
+    }
+
+    return result;
+  }
+
+  const o1 = animalFactory("dog", "Rex");
+  const o2 = animalFactory("dog", "Bonzo");
+
+  const o3 = animalFactory("cat", "Mitzi");
+  const o4 = animalFactory("cat", "Whiskers");
+
+  o1.speak();
+  o2.speak();
+  o3.speak();
+  o4.speak();
 
   return (
     <>
