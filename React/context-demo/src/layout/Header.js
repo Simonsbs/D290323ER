@@ -1,16 +1,34 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 function Header() {
-  const theme = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const textColor = theme === "dark" ? "text-light" : "text-dark";
 
   return (
     <nav className={`navbar navbar-${theme} bg-${theme}`}>
       <div className="container-fluid">
-        <div
-          className={`navbar-brand text-${theme === "dark" ? "light" : "dark"}`}
-        >
-          My App
+        <div className={`navbar-brand ${textColor}`}>My App</div>
+        <div className="form-check form-switch">
+          <input
+            type="checkbox"
+            id="cbToggleTheme"
+            className="form-check-input"
+            onChange={toggleTheme}
+            value={theme === "dark"}
+          />
+          <label
+            className={`form-check-label ${textColor}`}
+            htmlFor="cbToggleTheme"
+          >
+            {theme}
+            <i
+              className={`bi bi-${
+                theme === "dark" ? "moon-fill" : "brightness-high-fill"
+              } ms-2`}
+            ></i>
+          </label>
         </div>
       </div>
     </nav>

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 function Footer() {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   let themeContrast = theme;
   switch (theme) {
