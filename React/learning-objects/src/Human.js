@@ -2,6 +2,8 @@ class Human {
   constructor(name, age) {
     this.name = name;
     this.age = age;
+
+    console.log("new human created");
   }
 
   describe() {

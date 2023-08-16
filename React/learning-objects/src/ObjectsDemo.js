@@ -1,8 +1,11 @@
 import Animal from "./Animal";
+import Animal2 from "./Animal2";
+import Bird from "./Bird";
 import Cat from "./Cat";
 import Developer from "./Developer";
 import Dog from "./Dog";
 import Human from "./Human";
+import Lion from "./Lion";
 
 function ObjectsDemo() {
   const a1 = new Animal("Bob");
@@ -18,6 +21,10 @@ function ObjectsDemo() {
 
   const h1 = new Human("Bob", 30);
   const dev1 = new Developer("Simon", 20, "javascript");
+
+  const a3 = new Animal2("Jim");
+  const a4 = new Bird("Polly");
+  const a5 = new Lion("Ted");
 
   return (
     <>
@@ -38,6 +45,11 @@ function ObjectsDemo() {
       <ul>
         <li>dev1: {dev1.describe()}</li>
         <li>dev1: {dev1.whatLanguagesDoIKnow()}</li>
+      </ul>
+      <ul>
+        <li>a3: {a3.speak()}</li>
+        <li>a4: {a4.speak()}</li>
+        <li>a5: {a5.speak()}</li>
       </ul>
       <hr />
     </>
