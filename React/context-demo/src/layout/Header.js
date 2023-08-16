@@ -10,16 +10,19 @@ function Header() {
     <nav className={`navbar navbar-${theme} bg-${theme}`}>
       <div className="container-fluid">
         <div className={`navbar-brand ${textColor}`}>My App</div>
+
+        {/* <button onClick={toggleTheme}>toggle</button> */}
+
         <div className="form-check form-switch">
           <input
             type="checkbox"
             id="cbToggleTheme"
             className="form-check-input"
             onChange={toggleTheme}
-            value={theme === "dark"}
+            checked={theme === "dark"}
           />
           <label
-            className={`form-check-label ${textColor}`}
+            className={`form-check-label ${textColor} text-capitalize`}
             htmlFor="cbToggleTheme"
           >
             {theme}
