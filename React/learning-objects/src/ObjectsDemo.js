@@ -16,8 +16,8 @@ function ObjectsDemo() {
 
   //console.log(d1);
 
-  const h1 = new Human("Bob");
-  const dev1 = new Developer("Simon", "javascript");
+  const h1 = new Human("Bob", 30);
+  const dev1 = new Developer("Simon", 20, "javascript");
 
   return (
     <>

@@ -1,8 +1,8 @@
 import Human from "./Human";
 
 class Developer extends Human {
-  constructor(name, programmingLanguage) {
-    super(name);
+  constructor(name, age, programmingLanguage) {
+    super(name, age);
     this.programmingLanguage = programmingLanguage;
   }
 
