@@ -17,8 +17,8 @@ function Footer() {
   }
 
   return (
-    <footer>
-      <div className={`footer bg-${theme} text-${themeContrast}`}>
+    <footer className={`footer bg-${theme} text-${themeContrast}`}>
+      <div className="container">
         <span>Some Footer Text - &copy; All rights reserved to ME!</span>
         <br />
         <span>The current theme is: {theme}</span>
