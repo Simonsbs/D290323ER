@@ -2,20 +2,23 @@ import { useState } from "react";
 import "./App.css";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <Header />
+    <ThemeProvider>
+      <div className="container-fluid">
+        <div className="row">
+          <Header />
+        </div>
+        <div className="row">
+          <h1>My App</h1>
+        </div>
+        <div className="row">
+          <Footer />
+        </div>
       </div>
-      <div className="row">
-        <h1>My App</h1>
-      </div>
-      <div className="row">
-        <Footer />
-      </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
