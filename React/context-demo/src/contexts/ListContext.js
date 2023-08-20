@@ -47,8 +47,11 @@ function generateRandomTitle() {
 
 export function ListProvider({ children }) {
   const [items, setItems] = useState(generateItemList(20));
+  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
-    <ListContext.Provider value={{ items }}>{children}</ListContext.Provider>
+    <ListContext.Provider value={{ items, setSelectedItem, selectedItem }}>
+      {children}
+    </ListContext.Provider>
   );
 }
