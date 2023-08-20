@@ -5,13 +5,11 @@ import { ThemeContext } from "../contexts/ThemeContext";
 
 function CardList() {
   const { items } = useContext(ListContext);
-  const { theme } = useContext(ThemeContext);
+  const { reversedTheme } = useContext(ThemeContext);
 
   return (
     <div className="container">
-      <h1 className={`text-${theme === "dark" ? "light" : "dark"}`}>
-        Card List
-      </h1>
+      <h1 className={`text-${reversedTheme}`}>Card List</h1>
       <div className="row">
         {items.map((x) => (
           <CardItem key={x.id} value={x} />
