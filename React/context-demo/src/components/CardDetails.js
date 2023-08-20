@@ -42,7 +42,10 @@ function CardDetails() {
               <div className="row">
                 <div className="col-4">
                   {hasPrev ? (
-                    <button className="btn btn-primary" onClick={handlePrev}>
+                    <button
+                      className="btn btn-primary w-100"
+                      onClick={handlePrev}
+                    >
                       <i className="bi bi-arrow-left"></i>
                     </button>
                   ) : (
@@ -50,13 +53,19 @@ function CardDetails() {
                   )}
                 </div>
                 <div className="col-4">
-                  <button className="btn btn-secondary" onClick={handleBack}>
+                  <button
+                    className="btn btn-secondary w-100"
+                    onClick={handleBack}
+                  >
                     <i className="bi bi-arrow-counterclockwise"></i>
                   </button>
                 </div>
                 <div className="col-4">
                   {hasNext ? (
-                    <button className="btn btn-primary" onClick={handleNext}>
+                    <button
+                      className="btn btn-primary w-100"
+                      onClick={handleNext}
+                    >
                       <i className="bi bi-arrow-right"></i>
                     </button>
                   ) : (
