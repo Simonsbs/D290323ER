@@ -3,8 +3,24 @@ import { ListContext } from "../contexts/ListContext";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 function CardDetails() {
-  const { theme } = useContext(ThemeContext);
-  const { selectedItem, setSelectedItem } = useContext(ListContext);
+  const { theme, reversedTheme } = useContext(ThemeContext);
+  const { selectedItem, setSelectedItem, items } = useContext(ListContext);
+
+  const currentIndex = items.findIndex((x) => x.id === selectedItem.id);
+  const hasPrev = currentIndex > 0;
+  const hasNext = currentIndex < items.length - 1;
+
+  const handleBack = () => {
+    setSelectedItem(null);
+  };
+
+  const handlePrev = () => {
+    setSelectedItem(items[currentIndex - 1]);
+  };
+
+  const handleNext = () => {
+    setSelectedItem(items[currentIndex + 1]);
+  };
 
   return (
     <div className="container">
@@ -17,26 +33,35 @@ function CardDetails() {
               alt={selectedItem.title}
               className="card-img-top"
             />
-            <div className="card-body">
-              <h5 className="card-title">{selectedItem.title}</h5>
+            <div className={`card-body bg-${reversedTheme}`}>
+              <h5 className={`card-title text-${theme}`}>
+                {selectedItem.title}
+              </h5>
             </div>
-            <div className="card-footer">
+            <div className={`card-footer bg-${reversedTheme}`}>
               <div className="row">
                 <div className="col-4">
-                  <button className="btn btn-primary">Prev</button>
+                  {hasPrev ? (
+                    <button className="btn btn-primary" onClick={handlePrev}>
+                      <i className="bi bi-arrow-left"></i>
+                    </button>
+                  ) : (
+                    <></>
+                  )}
                 </div>
                 <div className="col-4">
-                  <button
-                    className="btn btn-secondary"
-                    onClick={() => {
-                      setSelectedItem(null);
-                    }}
-                  >
-                    Back
+                  <button className="btn btn-secondary" onClick={handleBack}>
+                    <i className="bi bi-arrow-counterclockwise"></i>
                   </button>
                 </div>
                 <div className="col-4">
-                  <button className="btn btn-primary">Next</button>
+                  {hasNext ? (
+                    <button className="btn btn-primary" onClick={handleNext}>
+                      <i className="bi bi-arrow-right"></i>
+                    </button>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </div>
