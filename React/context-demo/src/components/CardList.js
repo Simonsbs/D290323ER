@@ -2,10 +2,20 @@ import { useContext } from "react";
 import { ListContext } from "../contexts/ListContext";
 import CardItem from "./CardItem";
 import { ThemeContext } from "../contexts/ThemeContext";
+import CardDetails from "./CardDetails";
 
 function CardList() {
-  const { items } = useContext(ListContext);
+  const { items, selectedItem } = useContext(ListContext);
   const { reversedTheme } = useContext(ThemeContext);
+
+  if (selectedItem) {
+    return (
+      <>
+        <h2 className={`text-${reversedTheme}`}>Selected item:</h2>
+        <CardDetails />
+      </>
+    );
+  }
 
   return (
     <div className="container">
