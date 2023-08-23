@@ -70,6 +70,11 @@ function App() {
       .put(`http://localhost:4000/users/${idToEdit}`, itemToEdit)
       .then((response) => {
         console.log(response);
+
+        const index = userFromAxios.findIndex((u) => u.id === idToEdit);
+        let newState = [...userFromAxios];
+        newState[index] = response.data;
+        setUserFromAxios(newState);
       })
       .catch((error) => console.log(error));
   };
