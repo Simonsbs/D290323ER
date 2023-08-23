@@ -79,6 +79,15 @@ function App() {
       .catch((error) => console.log(error));
   };
 
+  const handleDelete = (idToDelete) => {
+    axios
+      .delete(`http://localhost:4000/users/${idToDelete}`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <>
       <h1>My API Demo</h1>
@@ -103,7 +112,8 @@ function App() {
           {userFromAxios.map((u) => (
             <li key={u.id}>
               {u.id} |{u.firstName} {u.lastName} -
-              <button onClick={() => handleEdit(u.id)}>Edit User</button>
+              <button onClick={() => handleEdit(u.id)}>Edit User</button> |
+              <button onClick={() => handleDelete(u.id)}>Delete User</button>
             </li>
           ))}
         </ul>
