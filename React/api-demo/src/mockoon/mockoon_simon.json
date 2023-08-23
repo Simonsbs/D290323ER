@@ -1,5 +1,5 @@
 {
-  "uuid": "4c9fc81d-70a7-4219-be41-1960964f041e",
+  "uuid": "fd0e83d4-e689-4189-bc63-c7a867d1736d",
   "lastMigration": 28,
   "name": "Class",
   "endpointPrefix": "",
@@ -9,14 +9,14 @@
   "folders": [],
   "routes": [
     {
-      "uuid": "bb6d648c-e78c-4ddd-b48d-764e25be33a5",
+      "uuid": "2878d193-0ff1-4727-8ab8-b066afbef243",
       "type": "crud",
       "documentation": "",
       "method": "",
       "endpoint": "users",
       "responses": [
         {
-          "uuid": "fd403597-b364-4258-ac04-eb0901505329",
+          "uuid": "7204b631-384e-4154-9136-4df8fcedfb2d",
           "body": "{}",
           "latency": 0,
           "statusCode": 200,
@@ -38,14 +38,14 @@
       "responseMode": null
     },
     {
-      "uuid": "e6de5209-3821-45f5-880e-2ddd0c4df76a",
+      "uuid": "2477ef03-c4ad-496a-9d8b-1e088ba921b8",
       "type": "crud",
       "documentation": "",
       "method": "",
       "endpoint": "products",
       "responses": [
         {
-          "uuid": "b0a2e8e9-abde-4f3e-ae17-cfdd5910389e",
+          "uuid": "4d20bac2-ca7e-47c7-b838-f49a7c951c62",
           "body": "{}",
           "latency": 0,
           "statusCode": 200,
@@ -70,11 +70,11 @@
   "rootChildren": [
     {
       "type": "route",
-      "uuid": "bb6d648c-e78c-4ddd-b48d-764e25be33a5"
+      "uuid": "2878d193-0ff1-4727-8ab8-b066afbef243"
     },
     {
       "type": "route",
-      "uuid": "e6de5209-3821-45f5-880e-2ddd0c4df76a"
+      "uuid": "2477ef03-c4ad-496a-9d8b-1e088ba921b8"
     }
   ],
   "proxyMode": false,
@@ -122,14 +122,14 @@
   ],
   "data": [
     {
-      "uuid": "969a4ad5-807d-46d0-9fbe-4dd5549a1502",
+      "uuid": "718c0f22-8684-428f-a3ed-353be5c55ebd",
       "id": "bk9l",
       "name": "Users",
       "documentation": "",
       "value": "[\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"firstName\": \"Simon\",\n    \"lastName\": \"Stirling\",\n    \"username\": \"Simon\",\n    \"password\": \"1234\",\n    \"token\": \"{{faker 'random.alphaNumeric' 37}}.{{faker 'random.alphaNumeric' 75}}.{{faker 'random.alphaNumeric' 44}}\"\n  },\n  {{#repeat 10}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"firstName\": \"{{faker 'name.firstName'}}\",\n    \"lastName\": \"{{faker 'name.lastName'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\",\n    \"password\": \"{{faker 'random.alphaNumeric' 6}}\",\n    \"token\": \"{{faker 'random.alphaNumeric' 37}}.{{faker 'random.alphaNumeric' 75}}.{{faker 'random.alphaNumeric' 44}}\"\n  }{{#unless @last}},{{/unless}}\n  {{/repeat}}\n]"
     },
     {
-      "uuid": "b529a52a-d333-41c2-a5a6-e00d44e4be55",
+      "uuid": "673e4255-36ee-4a7c-a20b-51c6b2e34e53",
       "id": "abmc",
       "name": "Products",
       "documentation": "",

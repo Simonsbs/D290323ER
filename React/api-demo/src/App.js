@@ -35,6 +35,25 @@ function App() {
       .catch((error) => console.error("api error", error));
   }, []);
 
+  const handleAdd = () => {
+    // post = insert / add
+    const itemToAdd = {
+      firstName: "THIS IS NEW",
+      lastName: "IM NEW!!!",
+      username: "NEW NEW",
+      password: "1234",
+      token: "TOKEN",
+    };
+
+    axios
+      .post("http://localhost:4000/users", itemToAdd)
+      .then((response) => {
+        console.log(response);
+        setUserFromAxios([...userFromAxios, response.data]);
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <>
       <h1>My API Demo</h1>
@@ -65,6 +84,7 @@ function App() {
       ) : (
         <>No data</>
       )}
+      <button onClick={handleAdd}>Add User</button>
     </>
   );
 }
