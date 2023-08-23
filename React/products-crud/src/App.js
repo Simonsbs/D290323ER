@@ -7,6 +7,8 @@ function App() {
   const [showFormModal, setShowFormModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
+  const [products, setProducts] = useState([]);
+
   const handleAdd = () => {
     setShowFormModal(true);
   };
