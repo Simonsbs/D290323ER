@@ -84,6 +84,9 @@ function App() {
       .delete(`http://localhost:4000/users/${idToDelete}`)
       .then((response) => {
         console.log(response);
+
+        let newState = userFromAxios.filter((u) => u.id !== idToDelete);
+        setUserFromAxios(newState);
       })
       .catch((error) => console.log(error));
   };
