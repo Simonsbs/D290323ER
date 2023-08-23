@@ -1,0 +1,139 @@
+{
+  "uuid": "4c9fc81d-70a7-4219-be41-1960964f041e",
+  "lastMigration": 28,
+  "name": "Class",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 4000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "bb6d648c-e78c-4ddd-b48d-764e25be33a5",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "fd403597-b364-4258-ac04-eb0901505329",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "bk9l",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "e6de5209-3821-45f5-880e-2ddd0c4df76a",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "b0a2e8e9-abde-4f3e-ae17-cfdd5910389e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "abmc",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "bb6d648c-e78c-4ddd-b48d-764e25be33a5"
+    },
+    {
+      "type": "route",
+      "uuid": "e6de5209-3821-45f5-880e-2ddd0c4df76a"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "969a4ad5-807d-46d0-9fbe-4dd5549a1502",
+      "id": "bk9l",
+      "name": "Users",
+      "documentation": "",
+      "value": "[\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"firstName\": \"Simon\",\n    \"lastName\": \"Stirling\",\n    \"username\": \"Simon\",\n    \"password\": \"1234\",\n    \"token\": \"{{faker 'random.alphaNumeric' 37}}.{{faker 'random.alphaNumeric' 75}}.{{faker 'random.alphaNumeric' 44}}\"\n  },\n  {{#repeat 10}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"firstName\": \"{{faker 'name.firstName'}}\",\n    \"lastName\": \"{{faker 'name.lastName'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\",\n    \"password\": \"{{faker 'random.alphaNumeric' 6}}\",\n    \"token\": \"{{faker 'random.alphaNumeric' 37}}.{{faker 'random.alphaNumeric' 75}}.{{faker 'random.alphaNumeric' 44}}\"\n  }{{#unless @last}},{{/unless}}\n  {{/repeat}}\n]"
+    },
+    {
+      "uuid": "b529a52a-d333-41c2-a5a6-e00d44e4be55",
+      "id": "abmc",
+      "name": "Products",
+      "documentation": "",
+      "value": "[\n  {{#repeat 20}}\n    {\n      \"id\": {{faker 'datatype.number'}},\n      \"name\": \"{{faker 'commerce.productName'}}\",\n      \"description\": \"{{faker 'lorem.paragraph'}}\",\n      \"price\": {{faker 'commerce.price'}},\n      \"category\": \"{{faker 'commerce.department'}}\",\n      \"inStock\": {{faker 'datatype.boolean'}},\n      \"rating\": {{faker 'datatype.number' min=0 max=5}},\n      \"createdAt\": \"{{faker 'date.past'}}\",\n      \"other\": \"some value\"\n    }\n    {{#unless @last}},{{/unless}}\n  {{/repeat}}\n]"
+    }
+  ]
+}
