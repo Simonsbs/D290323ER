@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { faker } from "@faker-js/faker";
 
 function App() {
   const [user, setUser] = useState();
@@ -40,9 +41,10 @@ function App() {
     const itemToAdd = {
       firstName: "THIS IS NEW",
       lastName: "IM NEW!!!",
-      username: "NEW NEW",
+      username: faker.internet.userName(),
       password: "1234",
       token: "TOKEN",
+      stuff: "asdasd",
     };
 
     axios
@@ -54,10 +56,28 @@ function App() {
       .catch((error) => console.log(error));
   };
 
+  const handleEdit = (idToEdit) => {
+    const itemToEdit = {
+      firstName: "SIMON EDITED",
+      lastName: "NEW SIMON",
+      username: faker.internet.userName(),
+      password: "1234",
+      token: "TOKEN",
+      stuff: "asdasd",
+    };
+
+    axios
+      .put(`http://localhost:4000/users/${idToEdit}`, itemToEdit)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <>
       <h1>My API Demo</h1>
-      {user ? (
+      {/* {user ? (
         // <ul>
         //   <li>login: {user.login}</li>
         //   <li>id: {user.id}</li>
@@ -72,12 +92,13 @@ function App() {
       ) : (
         <>No data</>
       )}
-      <hr />
+      <hr /> */}
       {userFromAxios ? (
         <ul>
           {userFromAxios.map((u) => (
             <li key={u.id}>
-              {u.firstName} {u.lastName}
+              {u.id} |{u.firstName} {u.lastName} -
+              <button onClick={() => handleEdit(u.id)}>Edit User</button>
             </li>
           ))}
         </ul>
@@ -85,6 +106,11 @@ function App() {
         <>No data</>
       )}
       <button onClick={handleAdd}>Add User</button>
+      <button
+        onClick={() => handleEdit("a9c27e44-33d9-4743-b63e-a96160082c9c")}
+      >
+        Edit User
+      </button>
     </>
   );
 }
