@@ -43,9 +43,22 @@ function App() {
         setShowFormModal(false);
       });
     }
+
+    resetFormValues();
+  };
+
+  const resetFormValues = () => {
+    setFormValues({
+      name: "",
+      description: "",
+      price: "",
+      category: "",
+      inStock: false,
+    });
   };
 
   const handleAdd = () => {
+    resetFormValues();
     setSelectedProduct(null);
     setShowFormModal(true);
   };
@@ -54,6 +67,19 @@ function App() {
     setSelectedProduct(product);
     setFormValues(product);
     setShowFormModal(true);
+  };
+
+  const handleDelete = (product) => {
+    setSelectedProduct(product);
+    setShowDeleteModal(true);
+  };
+
+  const handleConfirmedDelete = () => {
+    axios.delete(API_ROOT + "/" + selectedProduct.id).then((respose) => {
+      fetchProducts();
+      setShowDeleteModal(false);
+      setSelectedProduct(null);
+    });
   };
 
   const handleChange = (e) => {
@@ -90,10 +116,7 @@ function App() {
                   <Button variant="primary" onClick={() => handleEdit(p)}>
                     Edit
                   </Button>
-                  <Button
-                    variant="danger"
-                    onClick={() => setShowDeleteModal(true)}
-                  >
+                  <Button variant="danger" onClick={() => handleDelete(p)}>
                     Delete
                   </Button>
                 </td>
@@ -107,6 +130,7 @@ function App() {
       <Button variant="primary" onClick={handleAdd}>
         Add Product
       </Button>
+
       <Modal show={showDeleteModal}>
         <Modal.Header>Confirm Delete</Modal.Header>
         <Modal.Body>Are you sure you want to delete?</Modal.Body>
@@ -114,7 +138,9 @@ function App() {
           <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
             Cancel
           </Button>
-          <Button variant="danger">Delete</Button>
+          <Button variant="danger" onClick={handleConfirmedDelete}>
+            Delete
+          </Button>
         </Modal.Footer>
       </Modal>
 
