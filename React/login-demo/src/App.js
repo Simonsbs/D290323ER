@@ -27,6 +27,7 @@ function App() {
         loginForm
       )
       .then((response) => {
+        localStorage.setItem("USER_TOKEN", response.data.token);
         console.log(response);
       })
       .catch((error) => {
