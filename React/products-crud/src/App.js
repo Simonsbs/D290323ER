@@ -6,10 +6,17 @@ import axios from "axios";
 const API_ROOT = "http://localhost:4000/products/";
 
 function App() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [showFormModal, setShowFormModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-
   const [products, setProducts] = useState();
+  const [formValues, setFormValues] = useState({
+    name: "",
+    description: "",
+    price: "",
+    category: "",
+    inStock: false,
+  });
 
   const fetchProducts = () => {
     axios.get(API_ROOT).then((response) => {
@@ -22,8 +29,38 @@ function App() {
     fetchProducts();
   }, []);
 
+  const handleSave = () => {
+    if (selectedProduct) {
+      axios
+        .put(API_ROOT + "/" + selectedProduct.id, formValues)
+        .then((result) => {
+          fetchProducts();
+          setShowFormModal(false);
+        });
+    } else {
+      axios.post(API_ROOT, formValues).then((result) => {
+        fetchProducts();
+        setShowFormModal(false);
+      });
+    }
+  };
+
   const handleAdd = () => {
+    setSelectedProduct(null);
     setShowFormModal(true);
+  };
+
+  const handleEdit = (product) => {
+    setSelectedProduct(product);
+    setFormValues(product);
+    setShowFormModal(true);
+  };
+
+  const handleChange = (e) => {
+    setFormValues((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
@@ -50,7 +87,9 @@ function App() {
                 <td>{p.category}</td>
                 <td>{p.inStock ? "Yes" : "No"}</td>
                 <td>
-                  <Button variant="primary">Edit</Button>
+                  <Button variant="primary" onClick={() => handleEdit(p)}>
+                    Edit
+                  </Button>
                   <Button
                     variant="danger"
                     onClick={() => setShowDeleteModal(true)}
@@ -78,13 +117,57 @@ function App() {
           <Button variant="danger">Delete</Button>
         </Modal.Footer>
       </Modal>
+
       <Modal show={showFormModal}>
         <Modal.Header>Add Product</Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group>
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" name="name" />
+              <Form.Control
+                type="text"
+                name="name"
+                value={formValues.name}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Description</Form.Label>
+              <Form.Control
+                type="text"
+                name="description"
+                value={formValues.description}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Price</Form.Label>
+              <Form.Control
+                type="text"
+                name="price"
+                value={formValues.price}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Category</Form.Label>
+              <Form.Control
+                type="text"
+                name="category"
+                value={formValues.category}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Check
+                label="In Stock"
+                type="checkbox"
+                name="category"
+                checked={formValues.inStock}
+                onChange={(e) => {
+                  setFormValues({ ...formValues, inStock: e.target.checked });
+                }}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -92,7 +175,9 @@ function App() {
           <Button variant="secondary" onClick={() => setShowFormModal(false)}>
             Cancel
           </Button>
-          <Button variant="primary">Save</Button>
+          <Button variant="primary" onClick={handleSave}>
+            Save
+          </Button>
         </Modal.Footer>
       </Modal>
     </>
