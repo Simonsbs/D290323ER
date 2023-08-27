@@ -1,13 +1,26 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Button, Form, Modal, Table } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+const API_ROOT = "http://localhost:4000/products/";
 
 function App() {
   const [showFormModal, setShowFormModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState();
+
+  const fetchProducts = () => {
+    axios.get(API_ROOT).then((response) => {
+      console.log(response);
+      setProducts(response.data);
+    });
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const handleAdd = () => {
     setShowFormModal(true);
@@ -27,20 +40,29 @@ function App() {
           <th>Actions</th>
         </thead>
         <tbody>
-          <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Description</td>
-            <td>Price</td>
-            <td>Category</td>
-            <td>In Stock</td>
-            <td>
-              <Button variant="primary">Edit</Button>
-              <Button variant="danger" onClick={() => setShowDeleteModal(true)}>
-                Delete
-              </Button>
-            </td>
-          </tr>
+          {products ? (
+            products.map((p) => (
+              <tr key={p.id}>
+                <td>{p.id}</td>
+                <td>{p.name}</td>
+                <td>{p.description}</td>
+                <td>{p.price}</td>
+                <td>{p.category}</td>
+                <td>{p.inStock ? "Yes" : "No"}</td>
+                <td>
+                  <Button variant="primary">Edit</Button>
+                  <Button
+                    variant="danger"
+                    onClick={() => setShowDeleteModal(true)}
+                  >
+                    Delete
+                  </Button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <>Loading...</>
+          )}
         </tbody>
       </Table>
       <Button variant="primary" onClick={handleAdd}>
