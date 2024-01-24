@@ -1,0 +1,7 @@
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\bin\Debug\Arrays.exe.config
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\bin\Debug\Arrays.exe
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\bin\Debug\Arrays.pdb
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\obj\Debug\Arrays.csproj.AssemblyReference.cache
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\obj\Debug\Arrays.exe
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Arrays\obj\Debug\Arrays.pdb
