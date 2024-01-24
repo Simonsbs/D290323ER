@@ -27,25 +27,67 @@ namespace Ex1Solution {
 			double result = 0;
 			while (!validOperatorEntered) {
 				op = Console.ReadLine();
-				if (op == "+") {
+
+				switch (op) {
+					case "add":
+					case "1":
+					case "sum":
+					case "+":
+						result = num1 + num2;
+						validOperatorEntered = true;
+						op = "+";
+						break;
+					case "-":
+					case "sub":
+					case "2":
+						result = num1 - num2;
+						validOperatorEntered = true;
+						op = "-";
+						break;
+					case "/":
+					case "div":
+					case "3":
+						if (num2 == 0) {
+							Console.WriteLine("Cannot divide by zero, pick a different operation (+,-,*)");
+						} else {
+							result = num1 / num2;
+							validOperatorEntered = true;
+							op = "/";
+						}
+						break;
+					case "*":
+					case "mul":
+					case "4":
+						result = num1 * num2;
+						validOperatorEntered = true;
+						op = "*";
+						break;
+					default:
+						Console.WriteLine("Invalid operator selection, try again");
+						break;
+				}
+
+				/*
+				if (op == "+" || op == "add" || op == "1") {
 					result = num1 + num2;
 					validOperatorEntered = true;
-				} else if (op == "-") {
+				} else if (op == "-" || op == "sub" || op == "2") {
 					result = num1 - num2;
 					validOperatorEntered = true;
-				} else if (op == "/") {
+				} else if (op == "/" || op == "div" || op == "3") {
 					if (num2 == 0) {
 						Console.WriteLine("Cannot divide by zero, pick a different operation (+,-,*)");
 					} else {
 						result = num1 / num2;
 						validOperatorEntered = true;
 					}
-				} else if (op == "*") {
+				} else if (op == "*" || op == "mul" || op == "4") {
 					result = num1 * num2;
 					validOperatorEntered = true;
 				} else {
 					Console.WriteLine("Invalid operator selection, try again");
 				}
+				*/
 			}
 
 			Console.WriteLine("The answer to " + num1 + op + num2 + "=" + result);

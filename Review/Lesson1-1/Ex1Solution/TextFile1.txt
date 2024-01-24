@@ -1,0 +1,17 @@
+﻿build a console application that asks the user to select a book genre:
+
+Fiction
+Non-Fiction
+Mystery
+Sci-Fi
+Fantasy
+Biology
+
+based on the users selection and using a switch case display the description of the genre:
+
+Fiction: Imaginative narrative works, often set in a fictional universe.
+Non-Fiction: Literature based on facts, real events, and real people.
+Mystery: Genre involving a mysterious death or a crime to be solved.
+Sci-Fi: Literature based on futuristic concepts, space exploration, time travel, etc.
+Fantasy: Literature set in an imaginary universe, often featuring magic and mythical beings.
+Biography: Detailed description of a person's life.
