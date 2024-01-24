@@ -1,0 +1,6 @@
+﻿Build a console application:
+1. get input from user:
+	a. 2 numbers
+	b. math operation
+2. perform math operation
+3. display result
