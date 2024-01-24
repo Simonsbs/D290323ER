@@ -1,0 +1,7 @@
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\bin\Debug\Methods.exe.config
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\bin\Debug\Methods.exe
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\bin\Debug\Methods.pdb
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\obj\Debug\Methods.csproj.AssemblyReference.cache
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\obj\Debug\Methods.csproj.CoreCompileInputs.cache
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\obj\Debug\Methods.exe
+D:\Lessons\Hacker-U\D290323ER\Review\Lesson1-1\Methods\obj\Debug\Methods.pdb

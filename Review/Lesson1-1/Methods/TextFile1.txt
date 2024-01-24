@@ -1,0 +1,10 @@
+﻿H.W.
+
+build a console application
+ask the user to enter a value between 1 and 20
+build an 2 arrays of the given length / or a 2D array
+ask the user to input values for the 2 arrays of numbers
+the loop over the arrays and for each pair of values (arr1[0], arr2[0]) OR (arr[0,0]) as the user what operation to preform. (add, subtract, multiply, divide)
+then preform the operation and print the result to the console.
+
+** try and use methods as much as possible.

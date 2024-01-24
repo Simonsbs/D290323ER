@@ -65,7 +65,14 @@ namespace Arrays {
 
 			//Console.WriteLine("5 = " + matrix2[1, 1]);
 
+			for (int i = 0; i < matrix2.GetLength(0); i++) {
+				for (int k = 0; k < matrix2.GetLength(1); k++) {
+					Console.Write(matrix2[i,k] + " | ");
+				}
+				Console.WriteLine(); // new line
+			}
 
+			int[,,] cube = new int[10, 10, 10];
 
 			Console.ReadKey();
 		}
