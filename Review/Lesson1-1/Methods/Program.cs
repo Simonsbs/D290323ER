@@ -55,12 +55,34 @@ namespace Methods {
 			 * result as an out parameter. print the result.
 			 */
 
+			/*
 			int num3 = 2;
 			int res;
 			SqrIt(num3, out res);
 			Console.WriteLine(res);
+			*/
+
+			//string[] src = {
+			//	"Hi",
+			//	"Simon",
+			//	"Something",
+			//	"Else"
+			//};
+			PrintAllMessages(1, "Your Message: ", "B", "C", "D", "E");
+
+			/*
+			 * Write a method called "SumNums" that takes a list of numbers as a "params" parameter
+			 * sums all the values and returns the result.
+			 */
+			
 
 			Console.ReadKey();
+		}
+
+		static void PrintAllMessages(int num, string prefix, params string[] messages) {
+			foreach (string message in messages) {
+				Console.WriteLine(prefix + message + " " + num);
+			}
 		}
 
 
