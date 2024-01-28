@@ -74,9 +74,20 @@ namespace Methods {
 			 * Write a method called "SumNums" that takes a list of numbers as a "params" parameter
 			 * sums all the values and returns the result.
 			 */
-			
+
+			int sum = SumNums(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+			Console.WriteLine("the sum is: " + sum);
 
 			Console.ReadKey();
+		}
+
+		static int SumNums(params int[] numbers) {
+			int sum = 0;
+			foreach (int num in numbers) {
+				sum += num;
+			}
+
+			return sum;
 		}
 
 		static void PrintAllMessages(int num, string prefix, params string[] messages) {
