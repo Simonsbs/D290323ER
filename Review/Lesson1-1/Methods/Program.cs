@@ -32,6 +32,17 @@ namespace Methods {
 			 *
 			 */
 
+			int num2 = 10;
+			DoubleIt(ref num2);
+			Console.WriteLine(num2);
+			DoubleIt(ref num2);
+			Console.WriteLine(num2);
+			DoubleIt(ref num2);
+			Console.WriteLine(num2);
+
+			
+
+
 
 			Console.ReadKey();
 		}
@@ -50,6 +61,10 @@ namespace Methods {
 
 		static void Increment(ref int value, int by) {
 			value = value + by;
+		}
+
+		static void DoubleIt(ref int value) {
+			value = value * 2;
 		}
 	}
 }
