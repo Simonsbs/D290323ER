@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Methods {
 	internal class Program {
 		static void Main(string[] args) {
-			Console.WriteLine("Hello World");
+			/*Console.WriteLine("Hello World");
 
 			string m = "message 1";
 
@@ -19,6 +19,19 @@ namespace Methods {
 			int result = AddTwoNumbers(2, 5);
 
 			Console.WriteLine("result is " + result);
+			*/
+
+			int num = 5;
+			Increment(ref num, 2);
+			Increment(ref num, 4);
+
+			/*
+			 * Write a method called "DoubleIt"
+			 * That takes an int value asa reference parameter and doubles it (no return)
+			 * call the method 3 times each time printing the value of the variable
+			 *
+			 */
+
 
 			Console.ReadKey();
 		}
@@ -33,6 +46,10 @@ namespace Methods {
 			int sum = num1 + num2;
 			Console.WriteLine("calculated the value");
 			return sum;
+		}
+
+		static void Increment(ref int value, int by) {
+			value = value + by;
 		}
 	}
 }
