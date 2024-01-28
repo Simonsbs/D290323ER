@@ -95,8 +95,17 @@ namespace Methods {
 			 *
 			 */
 
+			DisplayUser("Simon");
+			DisplayUser("Simon", 30);
+			DisplayUser("Simon", 30, "simon@simon.com");
+
 			Console.ReadKey();
 		}
+
+		static void DisplayUser(string name, int age = 20, string email = "no email") {
+			Console.WriteLine("Name: " + name + " Age: " + age + " Email: " + email);
+		}
+
 
 		static void PrintMyMood(string favColour = "White", string mood = "OK") {
 			Console.WriteLine("I am: " + mood + " and my color is: " + favColour);
