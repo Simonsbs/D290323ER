@@ -68,17 +68,38 @@ namespace Methods {
 			//	"Something",
 			//	"Else"
 			//};
-			PrintAllMessages(1, "Your Message: ", "B", "C", "D", "E");
+			//PrintAllMessages(1, "Your Message: ", "B", "C", "D", "E");
 
 			/*
 			 * Write a method called "SumNums" that takes a list of numbers as a "params" parameter
 			 * sums all the values and returns the result.
 			 */
-
+			/*
 			int sum = SumNums(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 			Console.WriteLine("the sum is: " + sum);
+			*/
+
+			PrintMyMood("Yellow", "Happy");
+			PrintMyMood();
+			PrintMyMood("Green");
+
+			/*
+			 * Build a method called "DisplayUser"
+			 * it takes 3 parameters:
+			 * 1. name
+			 * 2. age - default value 20
+			 * 3. email - default value "no email"
+			 * it prints all the parameters to the console
+			 *
+			 * call the function 3 times, each time with a different amount  of parameters
+			 *
+			 */
 
 			Console.ReadKey();
+		}
+
+		static void PrintMyMood(string favColour = "White", string mood = "OK") {
+			Console.WriteLine("I am: " + mood + " and my color is: " + favColour);
 		}
 
 		static int SumNums(params int[] numbers) {
