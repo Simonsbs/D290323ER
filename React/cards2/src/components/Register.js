@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { registerUser } from "../services/usersService";
+import { loginUser, registerUser } from "../services/usersService";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -52,6 +52,14 @@ const Register = () => {
     console.log(response);
     if (response.success) {
       setError(null);
+
+      const loginResponse = await loginUser(formData.email, formData.password);
+      console.log(loginResponse);
+      if (loginResponse.success) {
+        setError(null);
+      } else {
+        setError(loginResponse.message);
+      }
     } else {
       setError(response.message);
     }
