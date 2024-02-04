@@ -1,4 +1,7 @@
-﻿namespace Lesson1 {
+﻿using ConsoleLogger = Lesson1.Logger;
+using FileLogger = Other.SubName.AnotherName.YetAgain.Logger;
+
+namespace Lesson1 {
 	internal class Program {
 		static void Main(string[] args) {
 			//Employee employee = new Employee();
@@ -45,11 +48,20 @@
 			*/
 
 
-			Logger logger1 = new Logger();
+			ConsoleLogger logger1 = new ConsoleLogger();
 			logger1.Log("Hello World");
+
+			FileLogger logger2 = new FileLogger();
+			logger2.Log("Hello World");
+
+			Other.SubName.AnotherName.YetAgain.Logger logger3 = new Other.SubName.AnotherName.YetAgain.Logger();
+			logger3.Log("Hello World");
+
+
+			// Create a new Dog class under a new namespace
+			// have the new Dog class print out the dog's details to a file but
+			// in a different format and different fields
+			// create a new Dog object and call the method from both the new and old Dog classes
 		}
 	}
-
-	
-	
 }

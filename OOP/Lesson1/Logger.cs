@@ -13,10 +13,10 @@ namespace Lesson1 {
 
 }
 
-namespace Other {
+namespace Other.SubName.AnotherName.YetAgain {
 	internal class Logger {
 		public void Log(string message) {
-			File.AppendAllText("log.txt", message);
+			 File.AppendAllText("log.txt", message);
 		}
 	}
 }

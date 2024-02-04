@@ -12,6 +12,8 @@ namespace Lesson1 {
 
 		public void DoWork() {
 			Console.WriteLine(name + " is Doing work...");
+
+			
 		}
 	}
 }
