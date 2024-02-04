@@ -46,7 +46,7 @@ namespace Lesson1 {
 			d3.age = 2;
 			d3.PrintDetails();
 			*/
-
+			/*
 
 			ConsoleLogger logger1 = new ConsoleLogger();
 			logger1.Log("Hello World");
@@ -57,11 +57,45 @@ namespace Lesson1 {
 			Other.SubName.AnotherName.YetAgain.Logger logger3 = new Other.SubName.AnotherName.YetAgain.Logger();
 			logger3.Log("Hello World");
 
-
+			*/
 			// Create a new Dog class under a new namespace
 			// have the new Dog class print out the dog's details to a file but
 			// in a different format and different fields
 			// create a new Dog object and call the method from both the new and old Dog classes
+
+
+			//Employee e1 = new Employee();
+			//e1.name = "John";
+			//e1.age = 2;
+			//e1.CelebrateBirthday();
+
+			//Employee e2 = new Employee();
+			//e2.name = "Jane";
+			//e2.CelebrateBirthday();
+
+			//Employee e3 = new Employee();
+
+
+			// Change the Dog class to have a private field for age
+			// Add a method to the Dog class that increments the age
+			// Add a method to increase the dogs age and print out the details
+			// Create a new Dog object and call the method
+
+
+			// Add a Constructor to the Dog class that sets the name, breed and age
+			// Create 2 new Dog objects and call the method to print out the details
+
+			/*Dog d1 = new Dog();
+			d1.name = "Fido";
+			d1.breed = "Golden Retriever";
+			d1.PrintDetails();
+
+			Dog d2 = new Dog();
+			d2.name = "Rex";
+			d2.age = 5;
+			d2.PrintDetails();
+			*/
+
 		}
 	}
 }

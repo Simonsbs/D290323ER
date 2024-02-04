@@ -10,6 +10,12 @@ namespace Lesson1 {
 		public string breed;
 		public int age;
 
+		public Dog() {
+			name = "unknown";
+			breed = "unknown";
+			age = 1;
+		}
+
 		public void PrintDetails() {
 			Console.WriteLine("--------------------------");
 			Console.WriteLine("Name: " + name);
