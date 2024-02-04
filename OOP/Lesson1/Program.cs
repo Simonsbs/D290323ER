@@ -96,6 +96,20 @@ namespace Lesson1 {
 			d2.PrintDetails();
 			*/
 
+
+			Employee e1 = new Employee("Simon", 50);
+			//e1.name = "John";
+			
+			e1.jobTitle = "Developer";
+			e1.daysWorking = 10;
+			e1.CelebrateBirthday();
+
+
+			// Modify the Dog constructor to set the name and age
+			// make sure the age field is private
+			// validate that the dog age is between 0 and 20
+			// throw an exception if the age is not valid
+			// Create a new Dog object and call the method to print out the details
 		}
 	}
 }
