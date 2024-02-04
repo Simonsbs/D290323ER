@@ -11,6 +11,21 @@ namespace Lesson1 {
 		public int daysWorking;
 		private int age;
 
+		public Employee() {
+			name = "unknown";
+			jobTitle = "unknown";
+			daysWorking = 1;
+			age = 10;
+		}
+
+		public Employee(string name) {
+			this.name = name;
+		}
+
+		public Employee(int age) {
+			this.age = age;
+		}
+
 		public Employee(string name, int age) {
 			this.name = name;
 
@@ -20,6 +35,7 @@ namespace Lesson1 {
 			if (age > 120) {
 				throw new Exception("Age cannot be greater than 120");
 			}
+			this.age = age;
 		}
 
 		public void CelebrateBirthday() {

@@ -105,6 +105,13 @@ namespace Lesson1 {
 			e1.CelebrateBirthday();
 
 
+			Employee e2 = new Employee("Jim");
+			//e2.name = "Jane";
+			e2.jobTitle = "Developer";
+			e2.daysWorking = 10;
+			e2.CelebrateBirthday();
+
+
 			// Modify the Dog constructor to set the name and age
 			// make sure the age field is private
 			// validate that the dog age is between 0 and 20
