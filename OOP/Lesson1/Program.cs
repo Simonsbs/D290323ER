@@ -117,6 +117,17 @@ namespace Lesson1 {
 			// validate that the dog age is between 0 and 20
 			// throw an exception if the age is not valid
 			// Create a new Dog object and call the method to print out the details
+
+
+			// Create the following classes:
+			// 1. Cat
+			// 2. Bird
+			// 3. House
+			// 4. Car
+			// 5. Person
+			// for each one add at least 3 fields and 2 methods and a constructor
+			// create a new object for each class and call the methods
+
 		}
 	}
 }
