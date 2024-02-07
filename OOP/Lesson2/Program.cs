@@ -45,7 +45,7 @@ namespace Lesson2 {
 			// circle: Math.PI * radius ^2
 			// rectangle: length * width
 			// triangle: 0.5 * base * height
-
+			/*
 			AreaCalculator ac = new AreaCalculator(Math.PI);
 			
 			// call the method that takes 1 parameter and calculate the area of a circle
@@ -59,7 +59,41 @@ namespace Lesson2 {
 			// call the method that takes 3 parameters and calculate the area of a triangle
 			answer = ac.CalculateArea(10, 20, true);
 			Console.WriteLine("triangle are is: " + answer);
+			*/
 
+			/*
+			House h1 = new House("123 Main St", 3, true);
+			House h2 = new House("456 Elm St");
+			House h3 = new House(4);
+			*/
+
+
+			//Console.WriteLine(House.count);
+
+
+			/*House.count = 100;
+			Console.WriteLine(House.count);
+			*/
+
+			//House.IncrementCount();
+
+
+			Tools.count = 100;
+				
+			if (Tools.IsEven(25)) {
+				Console.WriteLine("yey!");
+			}
+
+			// HW
+			// Create a static class called "ConvertionTools"
+			// add the following convertion methods:
+			// 1. ConvertFahrenheitToCelsius
+			// 2. ConvertCelsiusToFahrenheit
+			// 3. ConvertMilesToKilometers
+			// 4. ConvertKilometersToMiles
+			// 5. ConvertPoundsToKilograms
+			// 6. ConvertKilogramsToPounds
+			// Call each method and print out the result
 		}
 	}
 }
