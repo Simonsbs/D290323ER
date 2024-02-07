@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson2 {
 	internal class User {
+		public int id;
 		public string email;
 		public string password;
 		public string name;
@@ -16,7 +17,23 @@ namespace Lesson2 {
 		public string dob;
 		public string motherMaidenName;
 
-		public User(string email, string password, string name, string address, string phone, string creditCard, string ssn, string dob, string motherMaidenName) {
+		public User(int id) {
+			// GET USER WITH id FROM DB
+			// CONNECTING... GETTING... READING... CLOSING...
+
+			// this.id = db.id;
+			// this.email = db.email;
+			// this.password = db.password;
+			// this.name = db.name;
+			// this.address = db.address;
+			// this.phone = db.phone;
+			// this.creditCard = db.creditCard;
+			// this.ssn = db.ssn;
+			// this.dob = db.dob;
+		}
+
+		public User(int id, string email, string password, string name, string address, string phone, string creditCard, string ssn, string dob, string motherMaidenName) {
+			this.id = id;
 			this.email = email;
 			this.password = password;
 			this.name = name;
@@ -29,7 +46,7 @@ namespace Lesson2 {
 		}
 
 		public User(string username, string password) :
-			this(username, password, "", "", "", "", "", "", "") {
+			this(0, username, password, "", "", "", "", "", "", "") {
 
 		}
 	}

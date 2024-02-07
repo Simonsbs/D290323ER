@@ -38,6 +38,7 @@ namespace Lesson2 {
 			this.age = age;
 		}
 
+
 		public void CelebrateBirthday() {
 			age++;
 
