@@ -26,13 +26,40 @@ namespace Lesson2 {
 
 			Bird b1 = new Bird("Polly", "Blue");
 			*/
-
+			/*
 			Calculator c1 = new Calculator();
 			int result = c1.Add(1, 2);
 			Console.WriteLine(result);
 			result = c1.Add(1, 2, 3);
 			Console.WriteLine(result);
 			result = c1.Add(1, 2, 3, 4, 5, 6, 7, 8);
+			*/
+
+			// Create a class called AreaCalculator
+			// write 3 methods called "CalculateArea" that take 1, 2 and 3 parameters and returns a double
+			// first: calculate circle takes a sing double parameter called radius
+			// second: calculate rectangle takes 2 double parameters called length and width
+			// third: calculate triangle takes 3 double parameters called base, height and boolean isTriangle
+			// create the class and call each method and print out the result
+			// 
+			// circle: Math.PI * radius ^2
+			// rectangle: length * width
+			// triangle: 0.5 * base * height
+
+			AreaCalculator ac = new AreaCalculator(Math.PI);
+			
+			// call the method that takes 1 parameter and calculate the area of a circle
+			double answer = ac.CalculateArea(10);
+			Console.WriteLine("circle are is: " + answer);
+			
+			// call the method that takes 2 parameters and calculate the area of a rectangle
+			answer = ac.CalculateArea(10, 20);
+			Console.WriteLine("rectangle are is: " + answer);
+
+			// call the method that takes 3 parameters and calculate the area of a triangle
+			answer = ac.CalculateArea(10, 20, true);
+			Console.WriteLine("triangle are is: " + answer);
+
 		}
 	}
 }
