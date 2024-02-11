@@ -118,11 +118,27 @@ namespace Lesson3 {
 				use the CalculateCircumference and CalculateExponential methods with different inputs and display the results.
 			 *
 			 */
-
+			/*
 			Console.WriteLine($"circle circumfrence: {MathConstants.CalculateCircumference(3)}");
 			Console.WriteLine($"exponant: {MathConstants.CalculateExponential(5)}");
+			*/
 
-			
+			Person p1 = new Person();
+
+			//p1.id = 456;
+			p1.ID = 456;
+			Console.WriteLine(p1.ID);
+
+			/*
+			 * Build a class called Cat
+			 * add the following fields: name, age, color, livesLeft
+			 * add and wrap each field with its own property using set and get
+			 * add a method that prints out all the cats details
+			 *
+			 * create an instance of the Cat and set the values using the PROPERTIES!!
+			 * execute the print method and verify all values were set correctly
+			 */
+
 		}
 	}
 }
