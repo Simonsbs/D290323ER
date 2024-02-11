@@ -98,9 +98,14 @@ namespace Lesson3 {
 				- Use Constants in Calculations
 			   In the MathConstants class, add a static method named CalculateCircumference that takes a double 
 				radius as an input and returns the circumference of a circle using Pi.
+				-- https://www.google.com/search?q=circle+circumference+equation
+			    -- 2 * Pi * radius
+
 			   Add another static method named CalculateExponential that takes a double base as an input and 
 				returns the exponential of that base raised to the power of E.
 			   Attempt to Modify Constants
+			    -- https://en.wikipedia.org/wiki/Exponential_function
+			    -- Math.Pow(baseValue, E)
 			   
 			   ** Try ** to modify the value of Pi and E within a method in the MathConstants class.
 			   Observe and note the compiler error.
