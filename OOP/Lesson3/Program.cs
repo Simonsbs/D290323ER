@@ -69,6 +69,8 @@ namespace Lesson3 {
 			 *
 			 *
 			 */
+
+			//DateTime dt = DateTime.Now;
 		}
 	}
 }
