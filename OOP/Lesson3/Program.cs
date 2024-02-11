@@ -72,7 +72,7 @@ namespace Lesson3 {
 
 			//DateTime dt = DateTime.Now;
 
-
+			/*
 			UserProfile u = new	UserProfile();
 			/*
 			// Only works if we remove the readonly from the fields
@@ -83,6 +83,8 @@ namespace Lesson3 {
 			
 			UserProfile u2 = new UserProfile(1234);
 			u2.DisplayProfileInfo();
+			*/
+				Example2.
 		}
 	}
 }

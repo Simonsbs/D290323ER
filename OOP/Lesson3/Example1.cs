@@ -21,8 +21,4 @@ namespace Lesson3 {
 			data.value = 789;
 		}
 	}
-
-	public class Data {
-		public int value = 0;
-	}
 }
