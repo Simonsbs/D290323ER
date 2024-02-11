@@ -79,12 +79,40 @@ namespace Lesson3 {
 			u.userID = 456;
 			u.creationDate = DateTime.Now;
 			*/
+			/*
 			u.DisplayProfileInfo();
 			
 			UserProfile u2 = new UserProfile(1234);
 			u2.DisplayProfileInfo();
 			*/
-				Example2.
+				
+
+			/*
+			 *
+				Create Constants
+			   
+			   Create a new C# class named MathConstants.
+			   Inside MathConstants, declare const fields for common mathematical constants: Pi (3.14159) and E (2.71828).
+			   
+			
+				- Use Constants in Calculations
+			   In the MathConstants class, add a static method named CalculateCircumference that takes a double 
+				radius as an input and returns the circumference of a circle using Pi.
+			   Add another static method named CalculateExponential that takes a double base as an input and 
+				returns the exponential of that base raised to the power of E.
+			   Attempt to Modify Constants
+			   
+			   ** Try ** to modify the value of Pi and E within a method in the MathConstants class.
+			   Observe and note the compiler error.
+			   Compare const with readonly
+			   
+			   Add a readonly field named creationDate initialized to the current date and time in the MathConstants class.
+			   
+			   Test Your Class
+			   In the Main method of a new console application, 
+				use the CalculateCircumference and CalculateExponential methods with different inputs and display the results.
+			 *
+			 */
 		}
 	}
 }
