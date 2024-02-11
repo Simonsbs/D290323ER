@@ -71,6 +71,18 @@ namespace Lesson3 {
 			 */
 
 			//DateTime dt = DateTime.Now;
+
+
+			UserProfile u = new	UserProfile();
+			/*
+			// Only works if we remove the readonly from the fields
+			u.userID = 456;
+			u.creationDate = DateTime.Now;
+			*/
+			u.DisplayProfileInfo();
+			
+			UserProfile u2 = new UserProfile(1234);
+			u2.DisplayProfileInfo();
 		}
 	}
 }
