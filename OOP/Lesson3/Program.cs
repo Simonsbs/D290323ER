@@ -20,7 +20,7 @@ namespace Lesson3 {
 			//e1.data = new Data();
 			e1.data.value = 789;
 			
-			Console.WriteLine(e1.myID);
+			//Console.WriteLine(e1.myID);
 
 
 			/*
@@ -118,6 +118,11 @@ namespace Lesson3 {
 				use the CalculateCircumference and CalculateExponential methods with different inputs and display the results.
 			 *
 			 */
+
+			Console.WriteLine($"circle circumfrence: {MathConstants.CalculateCircumference(3)}");
+			Console.WriteLine($"exponant: {MathConstants.CalculateExponential(5)}");
+
+			
 		}
 	}
 }
