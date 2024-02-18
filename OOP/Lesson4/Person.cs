@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lesson4 {
-	internal class Person {
+	internal partial class Person {
 		private string fName;
 
 		public string FirstName {

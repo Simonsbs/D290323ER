@@ -61,12 +61,25 @@ namespace Lesson4 {
 			// 5. AnnualSalary - Public read-only calculated property that returns Salary * 12.
 			// 6. create and test the properties
 
+			/*
 			Employee e1 = new Employee("Simon", "Stirling", 123.456M);
 			Console.WriteLine($"First name: {e1.FirstName}");
 			Console.WriteLine($"Last name: {e1.LastName}");
 			//Console.WriteLine($"Salary: {e1.Salary}");
 			Console.WriteLine($"Fullname: {e1.FullName}");
 			Console.WriteLine($"Annual Salary: {e1.AnnualSalary:N}");
+			*/
+
+			Person p1 = new Person();
+			p1.FirstName = "Simon";
+			p1.LastName = "Stirling";
+			p1.Print();
+
+
+			// Task: Create a partial 'Employee' class spread across two files:
+			// 1. In 'Employee.cs', define the public and private properties.
+			// 2. In 'Employee.Calculations.cs', define the calculated properties and methods.
+
 		}
 	}
 }
