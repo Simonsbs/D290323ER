@@ -1,4 +1,6 @@
-﻿namespace Lesson4 {
+﻿using System.Net.Http.Headers;
+
+namespace Lesson4 {
 	internal class Program {
 		static void Main(string[] args) {
 			/*
@@ -42,6 +44,13 @@
 			
 			Console.WriteLine($"Created: {p1.Created}");
 
+
+			Person person = new Person();
+			person.FirstName = "Simon";
+			person.LastName = "Stirling";
+			Console.WriteLine($"{person.FirstName}");
+			Console.WriteLine($"{person.FullName}");
+			
 		}
 	}
 }

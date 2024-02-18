@@ -37,7 +37,7 @@ namespace Lesson4 {
 			get {
 				return price;
 			}
-			set {
+			private set {
 				price = value;
 			}
 		}
