@@ -30,7 +30,7 @@ namespace Lesson4 {
 			// 2. Price - Read/Write property of type decimal.
 			// 3. ProductCode - Read-only property of type string. This should be auto-generated in the constructor.
 
-
+			/*
 			Product p1 = new Product();
 			Console.WriteLine($"Product Code is {p1.ProductCode}");
 			
@@ -50,7 +50,7 @@ namespace Lesson4 {
 			person.LastName = "Stirling";
 			Console.WriteLine($"{person.FirstName}");
 			Console.WriteLine($"{person.FullName}");
-			
+			*/
 
 			// Task: Create a 'Employee' class inside a new file named 'Employee.cs'.
 			// The 'Employee' class should have the following properties:
@@ -60,6 +60,13 @@ namespace Lesson4 {
 			// 4. FullName - Public read-only calculated property that returns "FirstName LastName".
 			// 5. AnnualSalary - Public read-only calculated property that returns Salary * 12.
 			// 6. create and test the properties
+
+			Employee e1 = new Employee("Simon", "Stirling", 123.456M);
+			Console.WriteLine($"First name: {e1.FirstName}");
+			Console.WriteLine($"Last name: {e1.LastName}");
+			//Console.WriteLine($"Salary: {e1.Salary}");
+			Console.WriteLine($"Fullname: {e1.FullName}");
+			Console.WriteLine($"Annual Salary: {e1.AnnualSalary:N}");
 		}
 	}
 }
