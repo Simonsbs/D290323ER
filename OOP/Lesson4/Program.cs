@@ -51,6 +51,15 @@ namespace Lesson4 {
 			Console.WriteLine($"{person.FirstName}");
 			Console.WriteLine($"{person.FullName}");
 			
+
+			// Task: Create a 'Employee' class inside a new file named 'Employee.cs'.
+			// The 'Employee' class should have the following properties:
+			// 1. FirstName - Public read/write property of type string.
+			// 2. LastName - Public read/write property of type string.
+			// 3. Salary - Private read/write property of type decimal.
+			// 4. FullName - Public read-only calculated property that returns "FirstName LastName".
+			// 5. AnnualSalary - Public read-only calculated property that returns Salary * 12.
+			// 6. create and test the properties
 		}
 	}
 }
