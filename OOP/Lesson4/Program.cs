@@ -1,6 +1,7 @@
 ﻿namespace Lesson4 {
 	internal class Program {
 		static void Main(string[] args) {
+			/*
 			Cat c1 = new Cat();
 
 			c1.Name = "Meowser";
@@ -19,13 +20,27 @@
 			Console.WriteLine($"{c2.Name}'s favorite number is {c2.FavoriteNumber}");
 			Console.WriteLine($"{c2.Name}'s favorite number is {c2.GetFavoriteNumber()}");
 			Console.WriteLine($"{c2.Name}'s full name is: {c2.FullName}");
-
+			*/
 
 			// Task: Create a 'Product' class inside a new file named 'Product.cs'.
 			// The 'Product' class should have the following properties:
 			// 1. Name - Read/Write property of type string.
 			// 2. Price - Read/Write property of type decimal.
 			// 3. ProductCode - Read-only property of type string. This should be auto-generated in the constructor.
+
+
+			Product p1 = new Product();
+			Console.WriteLine($"Product Code is {p1.ProductCode}");
+			
+			// wont work, Property is readonly
+			//p1.ProductCode = "NEW CODE!!!";
+
+			p1.Name = "Pencil";
+			
+			// wont work, Property is readonly
+			//p1.Created = DateTime.Now;
+			
+			Console.WriteLine($"Created: {p1.Created}");
 
 		}
 	}
