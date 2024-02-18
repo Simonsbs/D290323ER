@@ -69,16 +69,35 @@ namespace Lesson4 {
 			Console.WriteLine($"Fullname: {e1.FullName}");
 			Console.WriteLine($"Annual Salary: {e1.AnnualSalary:N}");
 			*/
-
+			/*
 			Person p1 = new Person();
 			p1.FirstName = "Simon";
 			p1.LastName = "Stirling";
 			p1.Print();
-
+			*/
 
 			// Task: Create a partial 'Employee' class spread across two files:
 			// 1. In 'Employee.cs', define the public and private properties.
 			// 2. In 'Employee.Calculations.cs', define the calculated properties and methods.
+
+			/*
+			BaseClass bc = new BaseClass();
+			bc.BaseProperty = "Base Value";
+			bc.BaseMethod();
+			*/
+
+
+			DerivedClass dc = new DerivedClass();
+			dc.DerivedProperty = "Derived Value";
+			dc.DerivedMethod();
+			dc.BaseProperty = "Derived Value2";
+			dc.BaseMethod();
+
+			// Task: Create a Base class called TopClass
+			// Create a class called BottomClass
+			// Add a property to TopClass
+			// Add a method to BottomClass
+			// make it so that BottomClass inherits from TopClass
 
 		}
 	}
