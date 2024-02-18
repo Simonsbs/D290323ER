@@ -93,12 +93,19 @@ namespace Lesson4 {
 			dc.BaseProperty = "Derived Value2";
 			dc.BaseMethod();
 
+			
+
+
 			// Task: Create a Base class called TopClass
 			// Create a class called BottomClass
 			// Add a property to TopClass
 			// Add a method to BottomClass
 			// make it so that BottomClass inherits from TopClass
 
+
+			// H.W.: Implement a basic inheritance hierarchy involving a single base class and at least two derived classes.
+			// Base class: Vehicle with common properties.
+			// Derived classes: Car and Truck, each with additional unique properties.
 		}
 	}
 }

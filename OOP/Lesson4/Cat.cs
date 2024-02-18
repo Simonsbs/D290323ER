@@ -19,7 +19,7 @@ namespace Lesson4 {
 
 		public int GetFavoriteNumber() {
 			Random rnd = new Random();
-			return rnd.Next(10, 50);
+				return rnd.Next(10, 50);
 		}
 
 		public int FavoriteNumber {
