@@ -27,6 +27,46 @@
 			r1.Draw();
 			r1.Draw2();
 			r1.Draw3();
+
+
+			/*
+			 * Develop an abstract base class for shapes with an abstract method to calculate the area.
+			 * Then, implement derived classes for specific shapes (e.g., Circle, Rectangle) that calculate their area.
+			   
+			   Abstract Base Class - Shape:
+			   Properties: None specific, but derived classes will have their own properties.
+			   Abstract Method: CalculateArea() (returns a double, calculates the shape's area)
+			   
+			
+				Derived Classes:
+			
+				Circle: Inherits from Shape
+			   Property: Radius (double)
+			   Implements CalculateArea() to calculate the area of the circle (π * Radius * Radius)
+			   
+				Rectangle: Inherits from Shape			   
+			   Properties: Width (double), Height (double)
+			   Implements CalculateArea() to calculate the area of the rectangle (Width * Height)
+			   
+				Square: Inherits from Rectangle
+			    Note: For a square, width and height are equal. You can require only one side length parameter for the 
+				constructor and pass it to the base class for both width and height.
+			   Uses the base class's CalculateArea() method directly, or optionally overrides it if necessary for clarification.
+			   
+			Exercise Tasks:
+			   Implement the abstract class Shape with the abstract method CalculateArea().
+			   Implement the derived classes Circle, Rectangle, and Square, including the necessary properties and the 
+			CalculateArea() method.
+			   In the Main method, create instances of each shape with given dimensions.
+			   Call the CalculateArea() method for each shape instance and print the results to demonstrate that each 
+			shape calculates its area correctly.
+			   
+			
+			Additional Challenge (Optional):
+			   Add input validation in the setters of the properties to ensure all dimensions are positive numbers.
+			   Implement a constructor in each derived class to initialize the shape's properties.
+			 */
+
 		}
 	}
 }
