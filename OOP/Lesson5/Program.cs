@@ -86,7 +86,6 @@ namespace Lesson5 {
 
 			Square s2 = new Square();
 
-
 			/*
 			
 				Modify the abstract base class to include a virtual method for printing the shape's details, 
@@ -121,6 +120,9 @@ namespace Lesson5 {
 
 
 			 */
+
+
+
 
 		}
 	}
