@@ -1,4 +1,6 @@
-﻿namespace Lesson5 {
+﻿using System.Reflection.Metadata;
+
+namespace Lesson5 {
 	internal class Program {
 		static void Main(string[] args) {
 			/*
@@ -17,7 +19,7 @@
 
 			//Shape s1 = new Shape();
 			//s1.Draw();
-			
+			/*
 			Circle c1 = new Circle();
 			c1.Draw();
 			c1.Draw2();
@@ -27,7 +29,7 @@
 			r1.Draw();
 			r1.Draw2();
 			r1.Draw3();
-
+			*/
 
 			/*
 			 * Develop an abstract base class for shapes with an abstract method to calculate the area.
@@ -65,6 +67,59 @@
 			Additional Challenge (Optional):
 			   Add input validation in the setters of the properties to ensure all dimensions are positive numbers.
 			   Implement a constructor in each derived class to initialize the shape's properties.
+			 */
+
+
+			//Shape s1 = new Shape();
+
+			Circle c1 = new Circle(5);
+			double result = c1.CalculateArea();
+			Console.WriteLine($"the c1 result is: {result}");
+
+			Rectangle r1 = new Rectangle(10,20);
+			result = r1.CalculateArea();
+			Console.WriteLine($"the r1 result is: {result}");
+
+			Square s1 = new Square(50);
+			result = s1.CalculateArea();
+			Console.WriteLine($"the s1 result is: {result}");
+
+			Square s2 = new Square();
+
+
+			/*
+			
+				Modify the abstract base class to include a virtual method for printing the shape's details, 
+				in addition to the abstract method for area calculation. Derived classes will then override 
+				this method to provide specific information about each shape.
+
+				Abstract Base Class - Shape:
+				Abstract Method: CalculateArea() (returns a double, calculates the shape's area)
+				Virtual Method: PrintDetails() (prints basic details about the shape)
+				
+				Modifications for Derived Classes:
+				
+				Circle:
+				Overrides PrintDetails() to print details specific to the circle, including its radius and area.
+			
+				Rectangle:
+				Overrides PrintDetails() to print details specific to the rectangle, including its width, height, and area.
+				
+				Square:
+				Overrides PrintDetails(), considering that Square is a special case of Rectangle, 
+				to print details specific to the square, including its side length and area.
+				
+				Implementation Steps:
+				
+				Shape Class:
+				Add a virtual method PrintDetails() that prints "This is a shape." or any generic information about shapes.
+				Circle, Rectangle, Square Classes:
+
+				Implement the CalculateArea() method as previously defined.
+				Override the PrintDetails() method to include shape-specific information. For example,
+				for Circle, it might print "Circle: Radius = [radius], Area = [area]."
+
+
 			 */
 
 		}
