@@ -110,7 +110,8 @@ namespace Lesson6 {
 			 * now call each object as a lower level type (Vehicle/Watercraft) and call the "StartEngine"
 			 *
 			 * add a method called "StopEngine" to Vehicle (not virtual)
-			 * hide the method in the Car, Truck, Watercraft and speedboat classes and call the method when looking at the object as its type and its lower type (Vehicle/Watercraft)
+			 * hide the method in the Car, Truck and speedboat classes and call the method when looking at the
+			 * object as its type and its lower type (Vehicle/Watercraft)
 			 */
 		}
 	}
