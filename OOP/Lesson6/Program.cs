@@ -91,9 +91,18 @@ namespace Lesson6 {
 
 			Bird bird = parrot;
 			bird.Speak();
+			bird.Speak2();
+			
+			// same as the lines above
+			//((Bird)parrot).Speak();
+			//((Bird)parrot).Speak2();
+
 
 			Animal parrotAsAnimal = parrot;
 			parrotAsAnimal.Speak();
+
+
+			
 
 
 			/*
