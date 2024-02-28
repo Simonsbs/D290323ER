@@ -131,7 +131,7 @@ namespace Lesson7 {
 			 *
 			 */
 
-
+			/*
 			Console.WriteLine("How many items do you want?");
 			if (!int.TryParse(Console.ReadLine(), out int arrayLength)) {
 				Console.WriteLine("Invalid value, using default (10)");
@@ -160,6 +160,41 @@ namespace Lesson7 {
 			Console.WriteLine("The resulting list is:");
 			foreach (BaseItem item in items) {
 				item.ExecuteCommonAction();
+			}
+
+			*/
+
+			object[] shapes = new object[15];
+			for (int i = 0; i < shapes.Length; i++) {
+				if (i % 2 == 0) {
+					shapes[i] = new Triangle();
+				} else if (i % 3 == 0) {
+					shapes[i] = new Circle();
+				} else {
+					shapes[i] = new Exception();
+				}
+			}
+
+			/*foreach (Shape shape in shapes) {
+				shape.Draw();
+			}*/
+
+			foreach (object obj in shapes) {
+				Shape s1 = obj as Shape;
+
+				/*
+				Shape s2;
+				if (obj is Shape) {
+					s2 = (Shape)obj;
+				} else {
+					s2 = null;
+				}
+				*/
+
+				if (s1 == null) {
+					continue;
+				}
+				s1.Draw();
 			}
 		}
 	}
