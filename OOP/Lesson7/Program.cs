@@ -1,6 +1,7 @@
 ﻿
 using Lesson7.HWSolution;
 using Lesson7.PolyDemo;
+using Lesson7.PolyEx;
 
 namespace Lesson7 {
 	internal class Program {
@@ -84,6 +85,7 @@ namespace Lesson7 {
 			}
 			*/
 
+			/*
 			Shape[] shapes = new Shape[15];
 			for (int i = 0; i < shapes.Length; i++) {
 				if (i % 2 == 0) {
@@ -98,7 +100,7 @@ namespace Lesson7 {
 			foreach (Shape shape in shapes) {
 				shape.Draw();
 			}
-
+			*/
 
 			/*
 			 *
@@ -128,6 +130,37 @@ namespace Lesson7 {
 			 *
 			 *
 			 */
+
+
+			Console.WriteLine("How many items do you want?");
+			if (!int.TryParse(Console.ReadLine(), out int arrayLength)) {
+				Console.WriteLine("Invalid value, using default (10)");
+				arrayLength = 10;
+			}
+
+			BaseItem[] items = new BaseItem[arrayLength];
+
+			for (int i = 0; i < arrayLength; i++) {
+				Console.WriteLine($"What level item do you want in position {i}");
+				string input = Console.ReadLine();
+
+				switch (input) {
+					case "1":
+						items[i] = new LevelOneItem();
+						break;
+					case "2":
+						items[i] = new LevelTwoItem();
+						break;
+					default:
+						items[i] = new LevelThreeItem();
+						break;
+				}
+			}
+
+			Console.WriteLine("The resulting list is:");
+			foreach (BaseItem item in items) {
+				item.ExecuteCommonAction();
+			}
 		}
 	}
 }
