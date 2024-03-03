@@ -47,7 +47,7 @@
 			Console.WriteLine("3. Eagle");
 			Console.WriteLine("4. Penguin");
 
-			Animal animalToAdd;
+			Animal animalToAdd = null;
 			string selection = Console.ReadLine();
 			switch (selection) {
 				case "1":
@@ -62,6 +62,21 @@
 				case "4":
 					animalToAdd = new Penguin();
 					break;
+			}
+
+			if (animalToAdd == null) {
+				Console.WriteLine("Invalid animal selection");
+			} else {
+				Console.WriteLine("Enter a name:");
+				string name = Console.ReadLine();
+
+				Console.WriteLine("Enter a age:");
+				int age = int.Parse(Console.ReadLine());
+
+				animalToAdd.Name = name;
+				animalToAdd.Age = age;
+
+				animals.Add(animalToAdd);
 			}
 		}
 	}
