@@ -1,0 +1,15 @@
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\bin\Debug\net8.0\Lesson8.exe
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\bin\Debug\net8.0\Lesson8.deps.json
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\bin\Debug\net8.0\Lesson8.runtimeconfig.json
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\bin\Debug\net8.0\Lesson8.dll
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\bin\Debug\net8.0\Lesson8.pdb
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.AssemblyInfoInputs.cache
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.AssemblyInfo.cs
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.csproj.CoreCompileInputs.cache
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.sourcelink.json
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.dll
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\refint\Lesson8.dll
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.pdb
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\Lesson8.genruntimeconfig.cache
+D:\Lessons\Hacker-U\D290323ER\OOP\Lesson8\obj\Debug\net8.0\ref\Lesson8.dll
