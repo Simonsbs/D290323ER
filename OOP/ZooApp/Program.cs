@@ -84,6 +84,22 @@
 				Console.WriteLine("Enter a age:");
 				int age = int.Parse(Console.ReadLine());
 
+				
+				Mammal mammal = animalToAdd as Mammal;
+				if (mammal != null) {
+					Console.WriteLine("Is it domestic (yes / no):");
+					string yesOrNo = Console.ReadLine();
+					mammal.IsDommestic = yesOrNo == "yes";
+				}
+				
+				/*
+				if (animalToAdd is Mammal) {
+					Console.WriteLine("Is it domestic:");
+					string yesOrNo = Console.ReadLine();
+					((Mammal)animalToAdd).IsDommestic = yesOrNo == "yes";
+				}
+				*/
+
 				animalToAdd.Name = name;
 				animalToAdd.Age = age;
 
