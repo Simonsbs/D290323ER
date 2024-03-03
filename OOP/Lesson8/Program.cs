@@ -6,7 +6,7 @@ namespace Lesson8 {
 
 			// Cant create new instance on interface
 			// IVehicle vehicle = new IVehicle();
-
+			/*
 			Car car = new Car();
 			car.Speed = 100;
 			bool res = car.StartEngine();
@@ -28,12 +28,12 @@ namespace Lesson8 {
 			IVehicle iv2 = new Car();
 
 			iv2.StartEngine();
-
+			*/
 			// create an interface called "ISpeak" 
 			// add Talk method and Name property to ISpeak
 			// create a class called "Dog" that implements ISpeak and implements the contract
 			// create instance of Dog and call the property and method
-
+			/*
 			Console.WriteLine("------------------------");
 
 			IVehicle[] vehicles = new IVehicle[10];
@@ -48,7 +48,7 @@ namespace Lesson8 {
 			foreach (IVehicle vehicle in vehicles) {
 				vehicle.StartEngine();
 			}
-
+			*/
 
 			// build an interface called "ILogger"
 			// add a method called "Log" that takes a string
@@ -70,59 +70,48 @@ namespace Lesson8 {
 			foreach (ILogger logger in loggers) {
 				logger.Log($"This is my message: {DateTime.Now}");
 			}
-		}
-	}
 
-	interface IVehicle {
-		bool StartEngine();
 
-		void StopEngine(int val);
+			Car c1 = new Car("asd", 123);
+			ElectricCar ec1 = new ElectricCar("asd", 123);
+			HybridCar hc1 = new HybridCar("cvbcvb", 444);
 
-		int Speed {
-			get; set;
-		}
-	}
+			//IChargable chargable = c1;
+			IChargable chargable2 = ec1;
+			//IChargable chargable3 = hc1;
 
-	class Truck : IVehicle {
-		public bool StartEngine() {
-			Console.WriteLine("Truck go!");
-			return true;
-		}
+			//chargable2.Charge();
 
-		public void StopEngine(int val) {
-			Console.WriteLine("Truck Stop!");
-		}
+			List<Vehicle> vehicles = new List<Vehicle>();
+			for (int i = 0; i < 10; i++) {
+				if (i % 2 == 0) {
+					vehicles.Add(new Vehicle("asd", 123));
+					vehicles.Add(new Car("asd", 123));
+				} else {
+					vehicles.Add(new ElectricCar("asd", 123));
+					vehicles.Add(new HybridCar("asd", 123));
+				}
+			}
 
-		public int Speed {
-			get; set;
-		}
-	}
 
-	class Car : IVehicle {
-		public Car() {
-			Console.WriteLine("Creating a Car");
-		}
+			foreach (Vehicle vehicle in vehicles) {
+				IChargable chargable = vehicle as IChargable;
+				if (chargable == null) {
+					continue;
+				}
 
-		public bool StartEngine() {
-			Console.WriteLine("Car Started");
+				chargable.Charge();
+			}
 
-			return true;
-		}
 
-		public void StopEngine(int val) {
-			Console.WriteLine("Car Stopped");
-		}
+			List<IChargable> chargables = new List<IChargable>();
+			chargables.Add(new ElectricCar("", 123));
+			chargables.Add(new ElectricTruck("", 123));
+			chargables.Add(new Battery());
 
-		public int Speed {
-			get; set;
-		}
-
-		public int NumberOfDoors {
-			get; set;
-		}
-
-		public void Honk() {
-			Console.WriteLine("Honk");
+			foreach (IChargable chargable in chargables) {
+				chargable.Charge();
+			}
 		}
 	}
 }
