@@ -1,4 +1,6 @@
-﻿namespace Lesson8 {
+﻿using Lesson8.Logger;
+
+namespace Lesson8 {
 	internal class Program {
 		static void Main(string[] args) {
 
@@ -53,10 +55,21 @@
 			// build a class called "FileLogger" that implements ILogger and writes to a file
 			// build a class called ConsoleLogger that implements ILogger and writes to the console
 
-			// File.WriteAllText(@"c:\temp\log.txt", "THIS IS A LINE OF TEXT!");
+			//File.WriteAllText(@"c:\temp\log.txt", "THIS IS A LINE OF TEXT!");
+			// DateTime.Now.ToString();
 
 			// create a List of ILogger and add an instance of each class
 			// in a loop call the "Log" method on each item and verify results
+
+			Console.WriteLine("------------------------");
+
+			List<ILogger> loggers = new List<ILogger>();
+			loggers.Add(new FileLogger());
+			loggers.Add(new ConsoleLogger());
+
+			foreach (ILogger logger in loggers) {
+				logger.Log($"This is my message: {DateTime.Now}");
+			}
 		}
 	}
 
