@@ -33,11 +33,22 @@
 		}
 
 		private static void DisplayAnimals() {
-
+			foreach (Animal animal in animals) {
+				animal.DisplayInformation();
+			}
 		}
 
 		private static void InteractWithAnimals() {
+			Console.WriteLine("Enter the name of the animal to speak with:");
+			string name = Console.ReadLine();
+			foreach (Animal animal in animals) {
+				if (animal.Name == name) {
+					animal.MakeSound();
+					return;
+				}
+			}
 
+			Console.WriteLine($"Animal {name} not found");
 		}
 
 		private static void AddAnimal() {
