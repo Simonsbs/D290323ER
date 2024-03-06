@@ -16,6 +16,8 @@
 			get; set;
 		}
 
+		// SIMON
+
 		public abstract void DisplayInformation();
 	}
 
