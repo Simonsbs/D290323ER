@@ -26,5 +26,14 @@
 		 * 7. build a method called "CheckWin" that checks if a given 'X' or 'O' has won.
 		 * 8. build a method called "IsBoardFull" that checks if the gameboard is full up.
 		 */
+
+		/*
+		 * Build and complete the game
+		 * - Allow user to select number of playes per game - 0, 1 or 2
+		 * - Input validations
+		 * - if 2 human players - get players names
+		 * - build the player and computer objects as classes with a shared base class
+		 * - loop - at the end of each match ask the user if he wants to play again
+		 */
 	}
 }
