@@ -40,7 +40,7 @@ namespace TicTacToe {
 					player2 = new ComputerPlayer('O');
 					break;
 				case 1:
-					player1 = new HumanPlayer("Human", 'X');
+					player1 = new HumanPlayer(GetPlayerName(1), 'X');
 					player2 = new ComputerPlayer('O');
 					break;
 				case 2:
