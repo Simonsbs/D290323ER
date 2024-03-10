@@ -1,0 +1,45 @@
+﻿Project Title: Library Management System
+Project Overview:
+Design and implement a console-based Library Management System using C# and .NET. 
+This application will manage a library's book inventory, track book loans to members, 
+and handle returns. This project will demonstrate an understanding of C# basics, 
+Object-Oriented Programming (OOP) principles such as classes, objects, inheritance, 
+and encapsulation, without requiring generics or more advanced features.
+
+Key Features:
+
+Book Inventory Management:
+
+Add, update, or remove books from the inventory.
+View a list of all books, including details like book ID, title, author, and availability status.
+Membership Management:
+
+Register new library members.
+Update or remove existing members.
+View a list of all members.
+Loan Management:
+
+Check out books to members (mark books as loaned and record to whom they are loaned).
+Accept returned books (update their availability status).
+View a list of all currently loaned books, including loanee details.
+Search Functionality:
+
+Search for books by title, author, or ID.
+Search for members by name or ID.
+Data Persistence: (Optional Advanced Feature)
+
+Save and load library data to and from a file.
+Suggested Classes and Objects:
+
+Book: Represents a book with properties like ID, title, author, and availability status.
+Member: Represents a library member with properties like ID, name, and contact information.
+Inventory: Manages the collection of books, including add, update, and remove operations.
+MemberRegistry: Manages member registrations and updates.
+LoanManager: Handles the checking out and returning of books.
+Search: Provides methods to search books and members.
+Additional Considerations:
+
+UI/Menu: Implement a simple text-based menu system for navigating the application's features.
+Error Handling: Include basic error handling to manage user input and prevent the application
+from crashing due to invalid data. Comments and Documentation: Write clear comments and documentation 
+for your classes and methods to describe their functionality.

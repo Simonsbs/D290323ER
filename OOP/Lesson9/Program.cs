@@ -1,4 +1,6 @@
-﻿namespace Lesson9 {
+﻿
+
+namespace Lesson9 {
 	internal class Program {
 		static void Main(string[] args) {
 			/*
@@ -36,10 +38,55 @@
 			DerivedClass dc4 = bObj as IClass;
 			Console.WriteLine($"dc2: {dc4}");
 			*/
-
+			/*
 			double a = 1.2;
 			int b = (int)a;
 			double c = (double)b;
+			*/
+			/*
+			List<Book> books = new List<Book>();
+			books.Add(new Book() {
+				ID = 1,
+				Name = "Book1",
+				Writer = "Writer1"
+			});
+			books.Add(new Book() {
+				ID = 2,
+				Name = "Book2",
+				Writer = "Writer2"
+			});
+			books.Add(new Book() {
+				ID = 3,
+				Name = "Book3",
+				Writer = "Writer3"
+			});
+
+			WriteToFile("mybooks.txt", books);
+			*/
+			List<Book> fromFile = ReadFromFile("mybooks.txt");
+
+			foreach (Book book in fromFile) {
+				Console.WriteLine(book);
+			}	
+		}
+
+		private static List<Book> ReadFromFile(string path) {
+			string content = File.ReadAllText(path);
+			string[] lines = content.Split(Environment.NewLine);
+			List<Book> books = new List<Book>();
+			foreach (string line in lines) {
+				//books.Add(new Book(line));
+				books.Add(Book.FromCSV(line));
+			}
+			return books;
+		}
+
+		private static void WriteToFile(string path, List<Book> books) {
+			string content = "";
+			foreach (Book book in books) {
+				content += book.ToString();
+			}
+			File.WriteAllText(path, content);
 		}
 	}
 }
