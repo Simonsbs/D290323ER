@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooApp", "ZooApp\ZooApp.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson8", "Lesson8\Lesson8.csproj", "{F5D8C2FC-80C4-400D-BF6B-3BA3E2B32FBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarySystem", "LibrarySystem\LibrarySystem.csproj", "{6CBC1781-2EDE-4974-A7E1-083485810240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibrarySystem", "LibrarySystem\LibrarySystem.csproj", "{6CBC1781-2EDE-4974-A7E1-083485810240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{ECBC6AE0-565C-4D4F-A432-1B1947BA121B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{ECBC6AE0-565C-4D4F-A432-1B1947BA121B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson9", "Lesson9\Lesson9.csproj", "{9B07645B-A5F1-46F9-8B3A-4AC22BF42DD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{ECBC6AE0-565C-4D4F-A432-1B1947BA121B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECBC6AE0-565C-4D4F-A432-1B1947BA121B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECBC6AE0-565C-4D4F-A432-1B1947BA121B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B07645B-A5F1-46F9-8B3A-4AC22BF42DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B07645B-A5F1-46F9-8B3A-4AC22BF42DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B07645B-A5F1-46F9-8B3A-4AC22BF42DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B07645B-A5F1-46F9-8B3A-4AC22BF42DD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

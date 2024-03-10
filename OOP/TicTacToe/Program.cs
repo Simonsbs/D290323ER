@@ -29,7 +29,7 @@
 
 		/*
 		 * Build and complete the game
-		 * - Allow user to select number of playes per game - 0, 1 or 2
+		 * - Allow user to select number of players per game - 0, 1 or 2
 		 * - Input validations
 		 * - if 2 human players - get players names
 		 * - build the player and computer objects as classes with a shared base class
