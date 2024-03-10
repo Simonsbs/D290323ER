@@ -1,17 +1,21 @@
 ﻿namespace TicTacToe {
 	internal class Program {
 		static void Main(string[] args) {
-			GameBoard gameBoard = new GameBoard();
+			//GameBoard gameBoard = new GameBoard();
 
-			gameBoard.MakeMove(0, 0, 'X');
-			gameBoard.MakeMove(1, 1, 'O');
-			gameBoard.MakeMove(2, 2, 'Z');
+			//gameBoard.MakeMove(0, 0, 'X');
+			//gameBoard.MakeMove(1, 1, 'O');
+			//gameBoard.MakeMove(2, 2, 'Z');
 
 			
-			gameBoard.DisplayBoard();
+			//gameBoard.DisplayBoard();
 
-			Console.WriteLine("is valid move: " + gameBoard.IsValidMove(1, 1));
-			Console.WriteLine("is valid move: " + gameBoard.IsValidMove(1, 2));
+			//Console.WriteLine("is valid move: " + gameBoard.IsValidMove(1, 1));
+			//Console.WriteLine("is valid move: " + gameBoard.IsValidMove(1, 2));
+
+
+			Game game = new Game();
+			game.Start();
 
 		}
 

@@ -14,6 +14,6 @@ namespace TicTacToe {
 			Name = name;
 		}
 
-		public abstract void MakeMove();
+		public abstract void MakeMove(GameBoard board);
 	}
 }
