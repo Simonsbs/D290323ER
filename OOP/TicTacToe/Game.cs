@@ -13,20 +13,18 @@ namespace TicTacToe {
 
 		public Game() {
 			board = new GameBoard();
-			InitializeGame();
 		}
 
 		public void Start() {
-			bool again = true;	
-			while (again) {
+			do {
+				InitializeGame();
 				GameLoop();
-                Console.WriteLine("Do you want to play again?");
+				Console.WriteLine("Do you want to play again?");
 				string input = Console.ReadLine().ToLower();
-				again = (input == "y" || input == "yes");
-				if (again) {
-					InitializeGame();
+				if (!(input == "y" || input == "yes")) {
+					return;
 				}
-            }
+			} while (true);
 		}
 
 		private void InitializeGame() {
@@ -64,7 +62,18 @@ namespace TicTacToe {
 					currentPlayer = currentPlayer == player1 ? player2 : player1;
 				}
 			}
-			// TODO: display game over
+			board.DisplayBoard();
+			DisplayEndGame();
+		}
+
+		private void DisplayEndGame() {
+			if (board.CheckWin(player1.Symbol)) {
+				Console.WriteLine($"{player1.Name} is the winner!!!");
+			} else if (board.CheckWin(player2.Symbol)) {
+				Console.WriteLine($"{player2.Name} is the winner!!!");
+			} else {
+				Console.WriteLine("Its an draw, better luck next time");
+			}
 		}
 
 		private string GetPlayerName(int playerNumber) {
